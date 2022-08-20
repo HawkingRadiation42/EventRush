@@ -25,11 +25,11 @@ class Login(BaseModel):
 #     event_id: str
 
 class Register(BaseModel):
-    email_id: str
+    email: str
     name: str
     college_name: str
     event_name: str
-    c_email_id: str
+    c_email: str
     event_date: str
     event_time: str
     event_type: str

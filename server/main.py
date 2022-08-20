@@ -67,9 +67,9 @@ async def register_login(login:Login):
 #     raise HTTPException(404, "there are no events to register")
 
 
-@app.post("/register",status_code=200)
+@app.post("/registeration",status_code=200)
 async def registeration_event(register: Register):
     response = await register_event(register.dict())
     if response:
-        return response
+        return 
     raise HTTPException(400, "something went wrong / bad request")

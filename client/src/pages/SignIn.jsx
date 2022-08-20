@@ -56,7 +56,7 @@ const SignIn = () => {
         navigate("/");
       }
     } catch (error) {
-      enqueueSnackbar("Check your email or password", { variant: "ERROR" });
+      enqueueSnackbar("Check your email or password", { variant: "error" });
       setLoading(false);
     }
   };

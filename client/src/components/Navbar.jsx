@@ -43,8 +43,14 @@ const Navbar = () => {
 
       {/* <FaUserAlt className="text-yellow-800 text-2xl" /> */}
       {localStorage.getItem("dp") && (
-        <div>
-          <img src={localStorage.getItem("dp")} alt="dp" className="w-10 h-10" />
+        <div className="flex">
+          <img src={localStorage.getItem("dp")} alt="dp" className="w-10 h-10 mr-5" />
+          <button
+            type="button"
+            class="focus:outline-none ml-5 text-white bg-orange-500 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 "
+            onClick={localStorage.clear()}
+          >
+            Log Out       </button>
         </div>)
       }
       {!localStorage.getItem("dp") && (<div className="flex"><Link to="/signin">

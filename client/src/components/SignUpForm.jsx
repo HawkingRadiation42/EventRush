@@ -4,6 +4,8 @@ import { RiLockPasswordFill } from "react-icons/ri";
 import { FaUserAlt, FaUniversity } from "react-icons/fa";
 import { BsGenderAmbiguous } from "react-icons/bs";
 import { GiDiploma } from "react-icons/gi";
+import logo from "../assets/EVENTrush.svg";
+
 
 const SignUpForm = ({
   handleTextChange,
@@ -11,26 +13,26 @@ const SignUpForm = ({
   handleUploadImageClick,
   handleSubmit,
 }) => (
-  <div className="flex justify-center items-center bg-white">
-    <div className="w-1/2 h-full flex justify-center flex-col items-center">
-      <h1>Event Rush</h1>
-      <h2>Sign up for CampusRush</h2>
-      <form>
+  <div className="flex justify-center items-center bg-white w-8/12">
+    <div className="w-1/2 flex justify-center flex-col items-center">
+    <img className="mb-6 mt-20" src={logo} alt="EventRushLogo"/>
+      <h2 className="font text-2xl font-semibold mb-9">Sign up for CampusRush</h2>
+      <form className="flex justify-center flex-col">
         <div className="mb-6">
           <label
             for="email"
-            className="block text-sm font-medium text-gray-900 "
+            className="block text-sm font-bold text-indigo-900 "
           >
             Your Email
           </label>
-          <div className="flex items-center border rounded-lg focus:border-blue-500">
+          <div className="flex items-center border rounded-lg focus:border-orange-500">
             <MdAlternateEmail className="text-gray-600" />
             <input
               type="email"
               id="email"
               name="email"
               className="  text-gray-900 text-sm rounded-lg focus:outline-none  block w-full p-2.5 "
-              placeholder="john.doe@company.com"
+              placeholder="Email address"
               required=""
               onChange={handleTextChange}
             />
@@ -39,18 +41,18 @@ const SignUpForm = ({
         <div className="mb-6">
           <label
             for="password"
-            className="block mb-2 text-sm font-medium text-gray-900 "
+            className="block mb-2 text-sm font-bold text-indigo-900 "
           >
             Password
           </label>
-          <div className="flex items-center border rounded-lg focus:border-blue-500">
+          <div className="flex items-center border rounded-lg focus:border-orange-500">
             <RiLockPasswordFill className="text-gray-600" />
             <input
               type="password"
               id="password"
               name="password"
-              className=" text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:outline-none block w-full p-2.5 "
-              placeholder="•••••••••"
+              className=" text-indigo-900 text-sm rounded-lg focus:ring-orange-500 focus:outline-none block w-full p-2.5 "
+              placeholder="Password"
               required=""
               onChange={handleTextChange}
             />
@@ -59,19 +61,19 @@ const SignUpForm = ({
         <div className="mb-6">
           <label
             for="password"
-            className="block mb-2 text-sm font-medium text-gray-900 "
+            className="block mb-2 text-sm font-bold text-indigo-900 "
           >
             Name
           </label>
-          <div className="flex items-center border focus:border-blue-500 rounded-lg">
+          <div className="flex items-center border focus:border-orange-500 rounded-lg">
             <FaUserAlt className="text-gray-600" />
             <input
               type="text"
               id="name"
-              className=" text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:outline-none block w-full p-2.5 "
+              className=" text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:outline-none block w-full p-2.5 "
               required=""
               name="name"
-              placeholder="John Doe"
+              placeholder="Name"
               onChange={handleTextChange}
             />
           </div>
@@ -80,7 +82,7 @@ const SignUpForm = ({
           <div>
             <label
               for="first_name"
-              className="block mb-2 text-sm font-medium text-gray-900"
+              className="block mb-2 text-sm font-bold text-indigo-900"
             >
               Age
             </label>
@@ -88,8 +90,8 @@ const SignUpForm = ({
             <input
               type="text"
               id="first_name"
-              className=" border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:outline-none block w-full p-2.5 "
-              placeholder="John"
+              className=" border text-indigo-900 text-sm rounded-lg focus:ring-orange-500 focus:outline-none block w-full p-2.5 "
+              placeholder="Enter Age Here"
               required=""
               name="age"
               onChange={handleTextChange}
@@ -98,16 +100,16 @@ const SignUpForm = ({
           <div>
             <label
               for="last_name"
-              className="block mb-2 text-sm font-medium text-gray-900 "
+              className="block mb-2 text-sm font-bold text-indigo-900 "
             >
               Gender
             </label>
-            <div className="flex items-center border focus:border-blue-500 rounded-lg">
+            <div className="flex items-center border focus:border-orange-500 rounded-lg">
               <BsGenderAmbiguous className="text-gray-600" />
               <input
                 type="text"
                 id="gender"
-                className=" text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:outline-none block w-full p-2.5 "
+                className=" text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:outline-none block w-full p-2.5 "
                 placeholder="Doe"
                 required=""
                 name="gender"
@@ -120,17 +122,17 @@ const SignUpForm = ({
         <div className="mb-6">
           <label
             for="confirm_password"
-            className="block mb-2 text-sm font-medium text-gray-900 "
+            className="block mb-2 text-sm font-bold text-indigo-900 "
           >
             College/University Name
           </label>
-          <div className="flex items-center border rounded-lg focus:border-blue-500">
+          <div className="flex items-center border rounded-lg focus:border-orange-500">
             <FaUniversity className="text-gray-600" />
             <input
               type="text"
               id="college"
-              className=" text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:outline-none block w-full p-2.5 "
-              placeholder=""
+              className=" text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:outline-none block w-full p-2.5 "
+              placeholder="eg. Manipal University Jaipur"
               required=""
               name="college"
               onChange={handleTextChange}
@@ -140,18 +142,18 @@ const SignUpForm = ({
         <div className="mb-2">
           <label
             for="email"
-            className="block text-sm font-medium text-gray-900 "
+            className="block text-sm font-bold text-indigo-900 "
           >
             College Email Id
           </label>
         </div>
-        <div className="flex items-center border rounded-lg focus:border-blue-500">
+        <div className="flex items-center border rounded-lg focus:border-orange-500">
           <GiDiploma className="text-gray-600" />
           <input
             type="email"
             id="collegeEmail"
-            className=" text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:outline-none block w-full p-2.5 "
-            placeholder="john.doe@company.com"
+            className=" text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:outline-none block w-full p-2.5 "
+            placeholder="eg. vansh.48873857@muj.manipal.edu"
             required=""
             name="collegeEmail"
             onChange={handleTextChange}
@@ -163,18 +165,18 @@ const SignUpForm = ({
               id="remember"
               type="checkbox"
               value=""
-              className="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 "
+              className="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-orange-300 "
               required=""
             />
           </div>
           <label
             for="remember"
-            className="ml-2 text-sm font-medium text-gray-900 "
+            className="ml-2 text-sm font-medium text-gray-400 "
           >
             I agree with the{" "}
             <a
               href="#"
-              className="text-blue-600 hover:underline dark:text-blue-500"
+              className="text-orange-400 hover:underline dark:text-orange-500"
             >
               terms and conditions
             </a>
@@ -183,10 +185,10 @@ const SignUpForm = ({
         </div>
         <button
           type="submit"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+          className="text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
           onClick={handleSubmit}
         >
-          Submit
+          SIGN UP
         </button>
       </form>
     </div>

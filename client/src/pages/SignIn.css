@@ -1,5 +1,5 @@
-.back {
-    background-image: url("../assets/signin_back.svg");
+.backg {
+    background-image: url("../assets/SignIn_background.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

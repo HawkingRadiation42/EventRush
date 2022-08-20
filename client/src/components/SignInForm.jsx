@@ -1,7 +1,7 @@
 import logo from "../assets/EVENTrush.svg";
 import { MdAlternateEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
-import bg from "../assets/SignInBg.jpg";
+// import bg from "../assets/SignInBg.jpg";
 // import { FaUserAlt, FaUniversity } from "react-icons/fa";
 // import { BsGenderAmbiguous } from "react-icons/bs";
 // import { GiDiploma } from "react-icons/gi";

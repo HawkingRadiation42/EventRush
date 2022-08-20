@@ -1,20 +1,21 @@
-import email
 from pydantic import BaseModel
 
-class singup(BaseModel):
-    Name: str
-    college: str 
-    mobile: int
+
+class SignUp(BaseModel):
+    profile_URL: str
     email: str
     password: str
-    image_url: str
+    Name: str
+    age: int
+    gender: str
+    college_name: str 
+    c_email: str
 
-
-class login(BaseModel):
+class Login(BaseModel):
     email: str
     password: str 
 
-class login_response(BaseModel):
+class Login_response(BaseModel):
     name: str
     college: str
     mobile: int

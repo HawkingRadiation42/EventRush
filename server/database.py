@@ -18,7 +18,7 @@ print("connection successfull!")
 
 async def register(signup):
     document = signup
-    print(document)
+
     result =  collection.insert_one(document)
     return document
 

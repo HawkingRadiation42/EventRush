@@ -218,7 +218,7 @@ const SignUpForm = ({
         <img className="w-1" src={Rectangle} alt="EventRushLogo" />
 
       </div>
-      <p className="text-center" id="uploadtext">
+      <p className="text-center ml-10" id="uploadtext">
         Upload your Profile Picture Above
       </p>
     </div>

@@ -1,5 +1,5 @@
 
-from model import SignUp, Login, Login_response
+from model import SignUp, Login
 
 #mongodb driver
 import motor.motor_asyncio
@@ -22,9 +22,6 @@ async def register(signup):
 
 async def signin(Login):
     document = Login
-    result = await collection.insert_one(document)
+    result = await collection.find_one(document)
     return document
-
-async def login_response():
-    return 1
     

@@ -5,12 +5,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import HTTPException
 from fastapi.responses import HTMLResponse, RedirectResponse
-from model import SignUp, Login, cultural_events
+from model import SignUp, Login, cultural_events, id
 
 
 from database import signin
 from database import register
-from database import register_cultural_events 
+from database import register_cultural_events
 
 
 app = FastAPI()
@@ -56,3 +56,14 @@ async def coding_events_func(event: cultural_events):
         return response
     raise HTTPException(404,"there are no events to register")
 
+
+# TO SEND ID TO FRONTEND USING RESPONSE
+
+# @app.post("/cultural", status_code=200)
+# async def event_id(event:id):
+#     response = await event_id(event)
+#     if response:
+#         return response
+#     raise HTTPException(404, "there are no events to register")
+
+    

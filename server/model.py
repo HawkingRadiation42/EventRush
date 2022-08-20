@@ -21,5 +21,6 @@ class cultural_events(BaseModel):
     event_type: str
     registered_participants: int = 1
 
-
+class id(BaseModel):
+    event_id: str
 

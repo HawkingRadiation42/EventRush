@@ -42,4 +42,9 @@ async def register_cultural_events(event):
     document = event
     result = await registeration.insert_one(document)
     return document
-    
+
+
+# async def event_id(event):
+#     document = {"name", "test"}
+#     result = await registeration.insert_one(document)
+#     return document 

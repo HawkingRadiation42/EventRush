@@ -1,0 +1,9 @@
+.mkptr{
+    cursor: pointer;
+}
+
+.line{
+    width: 6%;
+    height: 80%;
+    background-color: black;
+}

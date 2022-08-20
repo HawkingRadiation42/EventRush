@@ -11,6 +11,7 @@ cffi @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_f9af_
 charset-normalizer @ file:///home/conda/feedstock_root/build_artifacts/charset-normalizer_1655906222726/work
 click @ file:///Users/runner/miniforge3/conda-bld/click_1651215239605/work
 cryptography @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_5871d1ea-0250-4cd7-ac89-4b1e60514f5daqk8t0ow/croots/recipe/cryptography_1652101128666/work
+dnspython==2.2.1
 ecdsa @ file:///tmp/build/80754af9/ecdsa_1622554921100/work
 fastapi @ file:///home/conda/feedstock_root/build_artifacts/fastapi_1660871664908/work
 frozenlist @ file:///Users/runner/miniforge3/conda-bld/frozenlist_1659556995630/work

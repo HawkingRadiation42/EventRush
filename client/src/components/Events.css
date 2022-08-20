@@ -5,3 +5,13 @@
   background-attachment: fixed;
   min-height: 10vh;
 }
+
+
+.blurAniHeight{
+  height: 92% !important;
+  border-radius: 50px !important;
+}
+
+.blurAni:hover{
+  box-shadow: 0 0 70px rgb(33 33 33 / 100%);
+}

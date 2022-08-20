@@ -1,5 +1,9 @@
 import React from "react";
 import "./SignIn.css";
+import { MdAlternateEmail } from "react-icons/md";
+import { RiLockPasswordFill } from "react-icons/ri";
+
+
 
 const SignIn = () => {
   return (
@@ -10,32 +14,41 @@ const SignIn = () => {
         <h1 className="mb-6">Event Rush</h1>
         <h2>Sign in to your Account</h2>
         <form className="flex flex-col justify-center items-center h-96 w-96">
-          <div className="mb-6">
-            <label
+          <div className="text-left justify-start">
+        <label
               for="email"
-              className="block mb-2 text-sm font-medium text-gray-900 "
+              className="block mb-2 text-sm text-left font-medium text-gray-900 "
             >
               Email address
             </label>
+            </div>
+          <div className="flex items-center border rounded-lg focus:border-blue-500">
+          <MdAlternateEmail size={20} className="text-gray-600" />
             <input
               type="email"
               id="email"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-auto p-2.5 "
+              className="text-gray-900 text-sm rounded-lg focus:outline-none  block w-52 p-2.5"
               placeholder="john.doe@company.com"
               required=""
             />
           </div>
-          <div className="mb-6">
-            <label
+          <label
               for="password"
               className="block mb-2 text-sm font-medium text-gray-900 "
             >
               Password
             </label>
+
+          
+          <div className="text-gray-900 text-sm rounded-lg focus:outline-none w-56 p-2.5 flex items-center border focus:border-blue-500">
+
+
+          <RiLockPasswordFill size={20} className="text-gray-600" />
+            
             <input
               type="password"
               id="password"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+              className="text-gray-900 text-sm rounded-lg focus:outline-none block w-60"
               placeholder="•••••••••"
               required=""
             />

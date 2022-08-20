@@ -7,7 +7,8 @@ import sponsor3 from "../assets/Oneiros-Sponsors/image 3.svg";
 import sponsor4 from "../assets/Oneiros-Sponsors/image 4.svg";
 import sponsor5 from "../assets/Oneiros-Sponsors/image 5.svg";
 import sponsor6 from "../assets/Oneiros-Sponsors/image 6.svg";
-import poster from "../assets/Hack JKLU White Poster 1.svg";
+import poster from "../assets/Hack JKLU White Poster.svg";
+import OneirosLogo from "../assets/ONEIROS.svg";
 
 
 const OneirosComp = () => {
@@ -15,7 +16,22 @@ const OneirosComp = () => {
     <div className="bg-gray-200">
 
       <div className="backDrop flex p-10 ppp">
-        <img src={poster} alt="poster1" className="w-full" />
+        <img src={poster} alt="poster1" className="w-[15em] mt-[4em] h-[18em]" />
+
+        <div className="rounded-lg mt-20 h-64 p-2 bg-black w-3/12 bg-opacity-40">
+      <img className="w-1/2 ml-[4.5em] mt-4 mb-4" src={OneirosLogo} alt="EventRushLogo" />
+      <p className="text-white font-thin pl-8">Hosted by: <span className="font-semibold text-white">Student Council MUJ</span></p>
+      <p className="text-white font-thin pl-8">Venue: <span className="font-semibold text-white">Manipal University Jaipur</span></p>
+      <p className="text-white font-thin pl-8">Date: <span className="font-semibold text-white">16-18 OCT 2022</span></p>
+      <p className="text-white font-thin pl-8">Time: <span className="font-semibold text-white">0900 hrs</span></p>
+      <p className="text-white font-thin pl-8 mb-2">Event Fee: <span className="font-semibold text-white">Free</span></p>
+
+      <button type="button" className="w-8/12 p-1.5 ml-[3em] text-white bg-orange-400 rounded bg-opacity-40">Register </button>
+      <center>
+        <p className="text-white text-xs">Hurry only <span className="font-bold text-orange-400">1</span> seat left</p>
+      </center>
+      
+        </div>
 
 
       </div>

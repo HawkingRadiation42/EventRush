@@ -1,11 +1,10 @@
 
-from model import Singup, Login, Login_response
+from model import SignUp, Login, Login_response
 
 #mongodb driver
 import motor.motor_asyncio
 
-
-client = motor.motor_asyncio.AsmoyncIOMotorClient('localhost', 27017)
+client = motor.motor_asyncio.AsyncIOMotorClient('localhost', 27017)
 
 
 database = client.Authentication
@@ -14,14 +13,14 @@ print("connection successfull!")
 
 
 
-async def register(Singup):
-    document = Singup
+async def register(signup):
+    document = signup
     result = await collection.insert_one(document)
     print(result)
     return document
 
 
-async def singin(Login):
+async def signin(Login):
     document = Login
     result = await collection.insert_one(document)
     print(result)

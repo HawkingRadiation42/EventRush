@@ -1,16 +1,15 @@
 from pydantic import BaseModel
 
-class Singup(BaseModel):
-    profile_url: str
+
+class SignUp(BaseModel):
+    profile_URL: str
     email: str
     password: str
     Name: str
     age: int
     gender: str
     college_name: str 
-    college_email = str
-
-
+    c_email: str
 
 class Login(BaseModel):
     email: str

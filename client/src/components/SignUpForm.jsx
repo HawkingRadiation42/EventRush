@@ -5,8 +5,7 @@ import { FaUserAlt, FaUniversity } from "react-icons/fa";
 import { BsGenderAmbiguous } from "react-icons/bs";
 import { GiDiploma } from "react-icons/gi";
 import logo from "../assets/EVENTrush.svg";
-import './SignUpPage.css';
-
+import "./SignUpPage.css";
 
 const SignUpForm = ({
   handleTextChange,
@@ -16,11 +15,12 @@ const SignUpForm = ({
 }) => (
   <div className="flex justify-center items-center bg-white w-8/12">
     <div className="w-1/2 flex justify-center flex-col items-center">
-    <img className="mb-6 mt-16" src={logo} alt="EventRushLogo"/>
-      <h2 className="font text-2xl font-semibold mb-9">Sign up for CampusRush</h2>
+      <img className="mb-6 mt-16" src={logo} alt="EventRushLogo" />
+      <h2 className="font text-2xl font-semibold mb-9">
+        Sign up for CampusRush
+      </h2>
       <form className="flex justify-between flex-col ml-11">
         <div className="mb-2">
-          
           <label
             for="email"
             className="block text-sm font-bold text-indigo-900 "
@@ -176,12 +176,9 @@ const SignUpForm = ({
             className="ml-2 text-sm font-medium text-gray-400 "
           >
             I agree with the{" "}
-            <a
-              href="#"
-              className="text-orange-400 hover:underline dark:text-orange-500"
-            >
+            <button className="text-orange-400 hover:underline dark:text-orange-500">
               terms and conditions
-            </a>
+            </button>
             .
           </label>
         </div>
@@ -198,7 +195,12 @@ const SignUpForm = ({
       <hr />
     </div>
     <div className="flex flex-col">
-      <img src={upload} alt="img" className="mkptr w-10/12 ml-10" onClick={handleUploadImageClick} />
+      <img
+        src={upload}
+        alt="img"
+        className="mkptr w-10/12 ml-10"
+        onClick={handleUploadImageClick}
+      />
       <input
         type="file"
         className="hidden"
@@ -206,7 +208,9 @@ const SignUpForm = ({
         id="upload"
         onChange={handleUploadClick}
       ></input>
-      <p className="text-center">Upload your Profile Picture Above</p>
+      <p className="text-center" id="uploadtext">
+        Upload your Profile Picture Above
+      </p>
     </div>
   </div>
 );

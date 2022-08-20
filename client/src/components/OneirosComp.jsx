@@ -14,10 +14,15 @@ const OneirosComp = () => {
   return (
     <div className="bg-gray-200">
 
-      <div className="backDrop flex p-10">
+      <div className="backDrop flex">
 
         <div>
           <img src="{poster}" alt="" className="mt-12 h-11/12 poster z-20" />
+        </div>
+        <div>
+          <div className="bg-white h-11 w-11">
+            Resgister
+          </div>
         </div>
       </div>
 

@@ -39,5 +39,7 @@ async def signin(login):
 
 
 async def register_cultural_events(event):
-
-    return 1
+    document = event
+    result = await registeration.insert_one(document)
+    return document
+    

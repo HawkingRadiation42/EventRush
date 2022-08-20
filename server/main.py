@@ -49,10 +49,10 @@ async def register_login(login:Login):
 
 
 
-@app.get("/coding", response_model=cultural_events, status_code=200)
+@app.post("/cultural", response_model=cultural_events, status_code=200)
 async def coding_events_func(event: cultural_events):
     response = await register_cultural_events(event)
     if response:
         return response
-    raise HTTPException(404,"there are no events")
+    raise HTTPException(404,"there are no events to register")
 

@@ -23,7 +23,6 @@ async def register(signup):
 async def signin(Login):
     document = Login
     result = await collection.insert_one(document)
-    print(result)
     return document
 
 async def login_response():

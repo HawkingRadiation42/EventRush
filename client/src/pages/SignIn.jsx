@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SignIn.css";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,6 +7,18 @@ import "./SignIn.css";
 import { MdAlternateEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 
+const SignIn = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [age, setAge] = useState();
+  const [gender, setGender] = useState("");
+  const [college, setCollege] = useState("");
+  const [collegeEmail, setCollegeEmail] = useState("");
+  const [imageurl, setImageurl] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const storage = getStorage(app);
+  const { enqueueSnackbar } = useSnackbar();
 
 <<<<<<< HEAD
 =======

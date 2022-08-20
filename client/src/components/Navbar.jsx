@@ -23,7 +23,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="w-full flex justify-between items-center text-black font-medium text-lg p-6 capitalize bg-white backdrop-blur-sm border-b-2 border-yellow-500 fixed z-20 font-Kodchasan">
+    <nav className="w-full flex justify-between items-center mb-5 text-black font-medium text-lg p-6 capitalize bg-white backdrop-blur-sm border-b-2 border-yellow-500 fixed z-20 font-Kodchasan">
       <div className="flex justify-start items-center">
         <Link to="/">
           <img src={logo} alt="logo" className="w-48 " />

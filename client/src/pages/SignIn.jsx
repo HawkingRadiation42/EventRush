@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./SignIn.css";
 import SignInForm from "../components/SignInForm";
-import app from "../firebase";
 import { useSnackbar } from "notistack";
 import axios from "axios";
 import { endpoint } from "../App";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar"
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -43,17 +43,17 @@ const SignIn = () => {
     }
     try {
       const res = await axios.post(`${endpoint}/login`, data);
-      console.log(res);
       if (res.status === 200) {
         enqueueSnackbar("Logged in successfully", { variant: "success" });
         console.log(res);
-        localStorage.setItem("loggedin", true);
-        localStorage.setItem("email", res.data.email);
+        localStorage.setItem("Loggedin", true);
         localStorage.setItem("name", res.data.name);
         localStorage.setItem("college_name", res.data.college_name);
-        localStorage.setItem("dp", res.data.profile_URL);
+        localStorage.setItem("email", res.data.email);
+        // localStorage.setItem("dp", res.data.profile_URL);
+        // alert(res.data.profile_URL)
         setLoading(false);
-        navigate("/");
+        // navigate("/");
       }
     } catch (error) {
       enqueueSnackbar("Check your email or password", { variant: "error" });
@@ -62,11 +62,15 @@ const SignIn = () => {
   };
 
   return (
-    <div className="back flex justify-center items-center">
-      <SignInForm
-        handleTextChange={handleTextChange}
-        handleSubmit={handleSubmit}
-      />
+    <div>
+      <Navbar />
+      <div className="back flex justify-center items-center my-auto">
+        <SignInForm
+          handleTextChange={handleTextChange}
+          handleSubmit={handleSubmit}
+          className="mt-5"
+        />
+      </div>
     </div>
   );
 };

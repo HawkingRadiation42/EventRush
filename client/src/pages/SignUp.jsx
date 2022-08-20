@@ -7,6 +7,7 @@ import { useSnackbar } from "notistack";
 import axios from "axios";
 import { endpoint } from "../App";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar"
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -130,13 +131,16 @@ const SignUp = () => {
   };
 
   return (
-    <div className="back flex justify-center items-center">
-      <SignUpForm
-        handleTextChange={handleTextChange}
-        handleUploadImageClick={handleUploadImageClick}
-        handleUploadClick={handleUploadClick}
-        handleSubmit={handleSubmit}
-      />
+    <div>
+      <Navbar />
+      <div className="back flex justify-center items-center">
+        <SignUpForm
+          handleTextChange={handleTextChange}
+          handleUploadImageClick={handleUploadImageClick}
+          handleUploadClick={handleUploadClick}
+          handleSubmit={handleSubmit}
+        />
+      </div>
     </div>
   );
 };

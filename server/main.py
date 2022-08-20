@@ -44,7 +44,7 @@ async def register_login(login:Login):
     # Email = login.email
     response = await signin(login)
     if response:
-        return 
+        return response
     # raise HTTPException(400, f"something went wrong/bad request {}")
 
 

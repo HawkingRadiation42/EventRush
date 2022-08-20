@@ -1,13 +1,17 @@
 import React from "react";
 import "./SignIn.css";
+<<<<<<< HEAD
 import { MdAlternateEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 
 
+=======
+>>>>>>> df66ad7 (login layout started)
 
 const SignIn = () => {
   return (
     <div className="back flex justify-center items-center">
+<<<<<<< HEAD
     <div className="flex justify-center items-center bg-white">
       <div className="mt-6 w-1/2 h-full flex justify-center flex-col items-center">
 
@@ -90,6 +94,10 @@ const SignIn = () => {
       </div>
       <div>
         <hr />
+=======
+      <div className="flex justify-center items-center bg-white">Hello
+      
+>>>>>>> df66ad7 (login layout started)
       </div>
     </div>
   </div>

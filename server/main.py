@@ -28,6 +28,7 @@ app.add_middleware(
 )
 
 
+
 @app.post("/register", status_code=201)
 async def registering_signup(signup: SignUp):
     response = await register(signup.dict())

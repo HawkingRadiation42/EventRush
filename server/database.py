@@ -35,6 +35,7 @@ async def signin(login):
     return result
 
 
+
 async def register_event(register):
     document = register
     result = registeration.insert_one(document)

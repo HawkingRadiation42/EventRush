@@ -42,9 +42,9 @@ const Navbar = () => {
       </div>
 
       {/* <FaUserAlt className="text-yellow-800 text-2xl" /> */}
-      {localStorage.getItem("dp") && (
+      {localStorage.getItem("Loggedin") ? (
         <div className="flex">
-          <img src={localStorage.getItem("dp")} alt="dp" className="w-10 h-10 mr-5" />
+          {/* <img src={localStorage.getItem("dp")} alt="dp" className="w-10 h-10 mr-5" /> */}
           <button
             type="button"
             class="focus:outline-none ml-5 text-white bg-orange-500 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 "
@@ -52,23 +52,23 @@ const Navbar = () => {
           >
             Log Out       </button>
         </div>)
-      }
-      {!localStorage.getItem("dp") && (<div className="flex"><Link to="/signin">
-        <button
-          type="button"
-          class="focus:outline-none text-white bg-orange-500 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 "
-        >
-          Log In
-        </button>{" "}
-      </Link>
-        <Link to="/signup">
-          <button
-            type="button"
-            class="focus:outline-none text-white bg-orange-500 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 "
-          >
-            Register
-          </button>
-        </Link></div>)}
+        : (
+          <div className="flex"><Link to="/signin">
+            <button
+              type="button"
+              class="focus:outline-none text-white bg-orange-500 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 "
+            >
+              Log In
+            </button>{" "}
+          </Link>
+            <Link to="/signup">
+              <button
+                type="button"
+                class="focus:outline-none text-white bg-orange-500 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 "
+              >
+                Register
+              </button>
+            </Link></div>)}
 
     </nav>
   );

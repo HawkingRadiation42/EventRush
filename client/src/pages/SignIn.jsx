@@ -53,7 +53,7 @@ const SignIn = () => {
         // localStorage.setItem("dp", res.data.profile_URL);
         // alert(res.data.profile_URL)
         setLoading(false);
-        // navigate("/");
+        navigate("/");
       }
     } catch (error) {
       enqueueSnackbar("Check your email or password", { variant: "error" });

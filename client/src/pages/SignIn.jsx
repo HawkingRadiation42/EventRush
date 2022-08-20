@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import "./SignIn.css";
 import SignInForm from "../components/SignInForm";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import app from "../firebase";
 import { useSnackbar } from "notistack";
+import axios from "axios";
+import { endpoint } from "../App";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-  const [age, setAge] = useState();
-  const [gender, setGender] = useState("");
-  const [college, setCollege] = useState("");
-  const [collegeEmail, setCollegeEmail] = useState("");
-  const [imageurl, setImageurl] = useState(null);
   const [loading, setLoading] = useState(false);
-  const storage = getStorage(app);
   const { enqueueSnackbar } = useSnackbar();
+  const navigate = useNavigate();
+
+  const data = {
+    email: email,
+    password: password,
+  };
 
   const handleTextChange = (e) => {
     const { name, value } = e.target;
@@ -27,10 +28,7 @@ const SignIn = () => {
       case "password":
         setPassword(value);
         break;
-      
-      case "collegeEmail":
-        setCollegeEmail(value);
-        break;
+
       default:
         break;
     }
@@ -38,30 +36,21 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
-    if (
-      email.length === 0 ||
-      password.length === 0 ||
-      collegeEmail.length === 0
-    ) {
+    if (email.length === 0 || password.length === 0) {
       enqueueSnackbar("Please fill all the fields", { variant: "warning" });
       setLoading(false);
       return;
     }
-    const file = document.getElementById("upload").files[0];
-    console.log(file);
-    if (!file) {
-      enqueueSnackbar("Please upload an image", { variant: "warning" });
+    try {
+      const res = await axios.post(`${endpoint}/login`, data);
+      if (res.status === 200) {
+        enqueueSnackbar("Logged in successfully", { variant: "success" });
+        setLoading(false);
+        navigate("/");
+      }
+    } catch (error) {
+      enqueueSnackbar("Check your email or password", { variant: "ERROR" });
       setLoading(false);
-      return;
-    }
-    if (file) {
-      const storageRef = ref(storage, `${email}/${name}`);
-      await uploadBytes(storageRef, file).then((snapshot) => {
-        console.log("Uploaded a blob or file!");
-        getDownloadURL(ref(storage, `jklu/${email}/${name}`)).then((url) =>
-          setImageurl(url)
-        );
-      });
     }
   };
 
@@ -69,8 +58,6 @@ const SignIn = () => {
     <div className="back flex justify-center items-center">
       <SignInForm
         handleTextChange={handleTextChange}
-        // handleUploadImageClick={handleUploadImageClick}
-        // handleUploadClick={handleUploadClick}
         handleSubmit={handleSubmit}
       />
     </div>

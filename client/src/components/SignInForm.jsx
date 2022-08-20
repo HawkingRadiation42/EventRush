@@ -1,25 +1,15 @@
 import logo from "../assets/EVENTrush.svg";
 import { MdAlternateEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
-// import bg from "../assets/SignInBg.jpg";
-// import { FaUserAlt, FaUniversity } from "react-icons/fa";
-// import { BsGenderAmbiguous } from "react-icons/bs";
-// import { GiDiploma } from "react-icons/gi";
 
-const SignUpForm = ({
-  handleTextChange,
-  handleSubmit,
-}) => (
+const SignInForm = ({ handleTextChange, handleSubmit }) => (
   <div className="flex justify-center items-center bg-white w-5/12 h-full rounded">
     <div className="w-11/12 h-full flex justify-center flex-col items-center mt-6">
-      <img className="mb-6 mt-20" src={logo} alt="EventRushLogo"/>
+      <img className="mb-6 mt-20" src={logo} alt="EventRushLogo" />
       <h2 className="font text-2xl font-semibold">Sign In for CampusRush</h2>
       <form className="h-max mt-6 mb-6">
         <div className="mb-6">
-          <label
-            for="email"
-            className="block text-sm font-bold text-gray-900 "
-          >
+          <label for="email" className="block text-sm font-bold text-gray-900 ">
             Your Email
           </label>
           <div className="flex items-center border rounded-lg focus:border-blue-500">
@@ -55,8 +45,7 @@ const SignUpForm = ({
             />
           </div>
         </div>
-        
-        
+
         <div className="flex items-start mb-6">
           <div className="flex flex-row items-center h-5">
             <input
@@ -73,27 +62,32 @@ const SignUpForm = ({
           >
             Remember me
           </label>
-          <a href="#" className="text-sm font-semibold ml-9 text-orange-400"> Forgot Password? </a>
+          <a href="#" className="text-sm font-semibold ml-9 text-orange-400">
+            {" "}
+            Forgot Password?{" "}
+          </a>
         </div>
         <div className="flex justify-center">
-        <button
-          type="submit"
-          className=" w-full h-12 px-6 text-white transition-colors duration-150 bg-orange-400 rounded-md focus:shadow-outline hover:bg-orange-500"
-          onClick={handleSubmit}
-        >
-          SIGN IN
-        </button>
+          <button
+            type="submit"
+            className=" w-full h-12 px-6 text-white transition-colors duration-150 bg-orange-400 rounded-md focus:shadow-outline hover:bg-orange-500"
+            onClick={handleSubmit}
+          >
+            SIGN IN
+          </button>
         </div>
-      <h2 className="font mb-20">Don't have an account yet? <a href="#"><span className="text-orange-400 font-bold"> Sign Up </span></a></h2>
-
+        <h2 className="font mb-20">
+          Don't have an account yet?{" "}
+          <a href="#">
+            <span className="text-orange-400 font-bold"> Sign Up </span>
+          </a>
+        </h2>
       </form>
     </div>
     <div>
       <hr />
     </div>
-    
-    
   </div>
 );
 
-export default SignUpForm;
+export default SignInForm;

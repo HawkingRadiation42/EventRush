@@ -9,7 +9,7 @@ import Event from "./pages/Event";
 import Oneiros from "./pages/Oneiros";
 
 export const endpoint =
-  "https://8000-hawkingradiation-jklu-ddrvtgsmf8i.ws-us62.gitpod.io/";
+  "https://8000-hawkingradiation-jklu-ddrvtgsmf8i.ws-us62.gitpod.io";
 
 const App = () => {
   return (

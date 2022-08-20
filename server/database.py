@@ -1,5 +1,5 @@
 
-from model import SignUp, Login
+from model import SignUp, Login, Register
 from fastapi import HTTPException
 #mongodb driver
 import motor.motor_asyncio
@@ -37,14 +37,7 @@ async def signin(login):
     return result
 
 
-
-async def register_cultural_events(event):
-    document = event
+async def register_event(register):
+    document = register
     result = await registeration.insert_one(document)
     return document
-
-
-# async def event_id(event):
-#     document = {"name", "test"}
-#     result = await registeration.insert_one(document)
-#     return document 

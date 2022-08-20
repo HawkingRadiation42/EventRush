@@ -26,7 +26,7 @@ app.add_middleware(
 )
 
 
-@app.get("/register", response_model=signup)
+@app.post("/register", response_model=signup)
 async def registering_signup(signup: signup):
     response = await register(signup.dict())
     if response:
@@ -35,10 +35,9 @@ async def registering_signup(signup: signup):
     
 
 
-@app.get("/singup", response_model=login)
+@app.post("/singup", response_model=login)
 async def register_login(login:login):
     response = await register(login.dict())
     if response:
         return response 
     raise HTTPException(400, "something went wrong/bad request")
-    

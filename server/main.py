@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import HTTPException
 from fastapi.responses import HTMLResponse, RedirectResponse
-from model import SignUp, Login, id, Register
+from model import SignUp, Login, Register
 
 
 from database import signin

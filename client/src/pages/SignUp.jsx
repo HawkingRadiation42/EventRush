@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./SignUp.css";
 import SignUpForm from "../components/SignUpForm";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import app from "../firebase";
 import { useSnackbar } from "notistack";
+import axios from "axios";
+import { endpoint } from "../App";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -17,6 +20,39 @@ const SignUp = () => {
   const [loading, setLoading] = useState(false);
   const storage = getStorage(app);
   const { enqueueSnackbar } = useSnackbar();
+  const navigate = useNavigate();
+
+  const data = {
+    profile_URL: imageurl,
+    email: email,
+    password: password,
+    name: name,
+    age: age,
+    gender: gender,
+    college_name: college,
+    c_email: collegeEmail,
+  };
+
+  useEffect(() => {
+    if (imageurl) {
+      sendData();
+    }
+  }, [imageurl]);
+
+  const sendData = async () => {
+    try {
+      const res = await axios.post(`${endpoint}/register`, data);
+      if (res.status === 201) {
+        enqueueSnackbar("Submitted successfully", { variant: "success" });
+        navigate("/signin");
+        setLoading(false);
+      } else {
+        enqueueSnackbar("Error creating post", { variant: "error" });
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleTextChange = (e) => {
     const { name, value } = e.target;
@@ -63,7 +99,7 @@ const SignUp = () => {
       name.length === 0 ||
       password.length === 0 ||
       email.length === 0 ||
-      age.length === 0 ||
+      !age ||
       gender.length === 0 ||
       college.length === 0 ||
       collegeEmail.length === 0
@@ -83,7 +119,7 @@ const SignUp = () => {
       const storageRef = ref(storage, `${email}/${name}`);
       await uploadBytes(storageRef, file).then((snapshot) => {
         console.log("Uploaded a blob or file!");
-        getDownloadURL(ref(storage, `jklu/${email}/${name}`)).then((url) =>
+        getDownloadURL(ref(storage, `${email}/${name}`)).then((url) =>
           setImageurl(url)
         );
       });

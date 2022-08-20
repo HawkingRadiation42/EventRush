@@ -50,6 +50,11 @@ const SignIn = () => {
         localStorage.setItem("name", res.data.name);
         localStorage.setItem("college_name", res.data.college_name);
         localStorage.setItem("email", res.data.email);
+        // localStorage.setItem("event_name", "Oneiros");
+        // localStorage.setItem("college_email", res.data.c_email);
+        // localStorage.setItem("event_date","16-10-2022");
+        // localStorage.setItem("event_time","09:00");
+        // localStorage.setItem("event_type","Cultural Fest");
         // localStorage.setItem("dp", res.data.profile_URL);
         // alert(res.data.profile_URL)
         setLoading(false);

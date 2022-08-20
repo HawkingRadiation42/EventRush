@@ -1,5 +1,5 @@
 from http.client import HTTPResponse
-from signal import sigpending
+#from signal import sigpending
 from urllib import response
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -7,6 +7,9 @@ from fastapi import HTTPException
 from fastapi.responses import HTMLResponse, RedirectResponse
 from model import SignUp, Login, Register
 
+import os
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 
 from database import signin
 from database import register
@@ -71,9 +74,11 @@ async def register_login(login:Login):
 #     raise HTTPException(404, "there are no events to register")
 
 
-@app.post("/registeration",status_code=200)
+@app.post("/registration",status_code=200)
 async def registeration_event(register: Register):
     response = await register_event(register.dict())
     if response:
+        # email_twillo(register)
         return 
     raise HTTPException(400, "something went wrong / bad request")
+

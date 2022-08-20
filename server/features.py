@@ -1,4 +1,0 @@
-
-
-
-func email_verification()

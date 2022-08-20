@@ -5,6 +5,7 @@ import { FaUserAlt, FaUniversity } from "react-icons/fa";
 import { BsGenderAmbiguous } from "react-icons/bs";
 import { GiDiploma } from "react-icons/gi";
 import logo from "../assets/EVENTrush.svg";
+import './SignUpPage.css';
 
 
 const SignUpForm = ({
@@ -15,10 +16,11 @@ const SignUpForm = ({
 }) => (
   <div className="flex justify-center items-center bg-white w-8/12">
     <div className="w-1/2 flex justify-center flex-col items-center">
-    <img className="mb-6 mt-20" src={logo} alt="EventRushLogo"/>
+    <img className="mb-6 mt-16" src={logo} alt="EventRushLogo"/>
       <h2 className="font text-2xl font-semibold mb-9">Sign up for CampusRush</h2>
-      <form className="flex justify-center flex-col">
-        <div className="mb-6">
+      <form className="flex justify-between flex-col ml-11">
+        <div className="mb-2">
+          
           <label
             for="email"
             className="block text-sm font-bold text-indigo-900 "
@@ -38,7 +40,7 @@ const SignUpForm = ({
             />
           </div>
         </div>
-        <div className="mb-6">
+        <div className="mb-2">
           <label
             for="password"
             className="block mb-2 text-sm font-bold text-indigo-900 "
@@ -58,7 +60,7 @@ const SignUpForm = ({
             />
           </div>
         </div>
-        <div className="mb-6">
+        <div className="mb-2">
           <label
             for="password"
             className="block mb-2 text-sm font-bold text-indigo-900 "
@@ -78,7 +80,7 @@ const SignUpForm = ({
             />
           </div>
         </div>
-        <div className="grid gap-6 mb-6 md:grid-cols-2">
+        <div className="grid gap-6 mb-2 md:grid-cols-2">
           <div>
             <label
               for="first_name"
@@ -119,7 +121,7 @@ const SignUpForm = ({
           </div>
         </div>
 
-        <div className="mb-6">
+        <div className="mb-2">
           <label
             for="confirm_password"
             className="block mb-2 text-sm font-bold text-indigo-900 "
@@ -185,7 +187,7 @@ const SignUpForm = ({
         </div>
         <button
           type="submit"
-          className="text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+          className="text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-300 mb-16 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
           onClick={handleSubmit}
         >
           SIGN UP
@@ -196,7 +198,7 @@ const SignUpForm = ({
       <hr />
     </div>
     <div className="flex flex-col">
-      <img src={upload} alt="img" onClick={handleUploadImageClick} />
+      <img src={upload} alt="img" className="mkptr w-10/12 ml-10" onClick={handleUploadImageClick} />
       <input
         type="file"
         className="hidden"

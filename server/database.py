@@ -36,5 +36,8 @@ async def signin(login):
     # return result
     return result
 
-async def register_events():
+
+
+async def register_coding_events():
+    
     return 1

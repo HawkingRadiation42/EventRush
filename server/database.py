@@ -1,6 +1,6 @@
 
 from model import SignUp, Login
-
+from fastapi import HTTPException
 #mongodb driver
 import motor.motor_asyncio
 
@@ -20,8 +20,17 @@ async def register(signup):
     return document
 
 
-async def signin(Login):
-    document = Login
-    result = await collection.find_one(document)
-    return document
-    
+async def signin(login):
+    for key, value in login.dict().items():
+        email = key
+        password = value
+    # print(login)
+    # print(email)
+    # print(password)s
+    # Email = login.email
+    # print(Email)
+    result = await collection.find_one({"password": password})
+    if not result:
+        raise HTTPException(status_code=400, detail="Incorrect username or password")
+    # return result
+    return result

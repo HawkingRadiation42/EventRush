@@ -35,9 +35,13 @@ async def registering_signup(signup: SignUp):
     raise HTTPException(400, "something went wrong/bad request")
     
 
-@app.post("/login", response_model=SignUp, status_code=200)
+@app.post("/login", response_model=SignUp, status_code=200) #removed response model as data not fetched from the database 
 async def register_login(login:Login):
-    response = await signin(login.dict())
-    if response:
-        return response 
-    raise HTTPException(400, "something went wrong/bad request")
+    # details = login.dict()
+    # Email = login.email
+    response = await signin(login)
+    print(response)
+    # if response:
+    #     return response
+    return response
+    # raise HTTPException(400, f"something went wrong/bad request {}")

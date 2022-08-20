@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
@@ -7,23 +7,44 @@ import Coding from "./pages/Coding";
 import MyEvents from "./pages/MyEvents";
 import Event from "./pages/Event";
 import Oneiros from "./pages/Oneiros";
+import { AuthContext } from "./AuthContext";
 
-export const endpoint =
-"https://8000-hawkingradiation-jklu-alk39kpbkve.ws-us62.gitpod.io";
+export const endpoint = "http://127.0.0.1:8000";
 
 const App = () => {
+  const [name, setName] = useState("");
+  const [college_name, setCollege_name] = useState("");
+  const [email, setEmail] = useState("");
+  const [event_name, setEvent_name] = useState("Oneiros");
+  const [college_email, setCollege_email] = useState("");
+  const [event_date, setEvent_date] = useState("16-10-2022");
+  const [event_time, setEvent_time] = useState("09:00");
+  const [event_type, setEvent_type] = useState("Cultural Fest");
   return (
-    <div>
-      <Routes>
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/cultural" element={<Coding />} />
-        <Route path="/myevents" element={<MyEvents />} />
-        <Route path="/event" element={<Event />} />
-        <Route path="/event/oneiros" element={<Oneiros />} />
-      </Routes>
-    </div>
+    <AuthContext.Provider
+      value={{
+        name: [name, setName],
+        college_name: [college_name, setCollege_name],
+        email: [email, setEmail],
+        event_name: [event_name, setEvent_name],
+        college_email: [college_email, setCollege_email],
+        event_date: [event_date, setEvent_date],
+        event_time: [event_time, setEvent_time],
+        event_type: [event_type, setEvent_type],
+      }}
+    >
+      <div>
+        <Routes>
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/cultural" element={<Coding />} />
+          <Route path="/myevents" element={<MyEvents />} />
+          <Route path="/event" element={<Event />} />
+          <Route path="/event/oneiros" element={<Oneiros />} />
+        </Routes>
+      </div>
+    </AuthContext.Provider>
   );
 };
 

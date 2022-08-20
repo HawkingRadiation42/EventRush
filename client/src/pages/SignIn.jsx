@@ -5,17 +5,24 @@ import { useSnackbar } from "notistack";
 import axios from "axios";
 import { endpoint } from "../App";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar";
+const { AuthContext } = require("../AuthContext");
 
 const SignIn = () => {
-  const [email, setEmail] = useState("");
+  const [emailid, setEmailid] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
   const navigate = useNavigate();
+  const { name, email, college_name, college_email } =
+    React.useContext(AuthContext);
+  const [name1, setName] = name;
+  const [email1, setEmail] = email;
+  const [college_name1, setCollege_name] = college_name;
+  const [college_email1, setCollege_email] = college_email;
 
   const data = {
-    email: email,
+    email: emailid,
     password: password,
   };
 
@@ -23,7 +30,7 @@ const SignIn = () => {
     const { name, value } = e.target;
     switch (name) {
       case "email":
-        setEmail(value);
+        setEmailid(value);
         break;
       case "password":
         setPassword(value);
@@ -45,15 +52,12 @@ const SignIn = () => {
       const res = await axios.post(`${endpoint}/login`, data);
       if (res.status === 200) {
         enqueueSnackbar("Logged in successfully", { variant: "success" });
-        console.log(res);
-        localStorage.setItem("Loggedin", true);
-        localStorage.setItem("name", res.data.name);
-        localStorage.setItem("college_name", res.data.college_name);
-        localStorage.setItem("email", res.data.email);
-        // localStorage.setItem("dp", res.data.profile_URL);
-        // alert(res.data.profile_URL)
+        setName(res.data.name);
+        setCollege_name(res.data.college_name);
+        setEmail(res.data.email);
+        setCollege_email(res.data.c_email);
         setLoading(false);
-        // navigate("/");
+        navigate("/");
       }
     } catch (error) {
       enqueueSnackbar("Check your email or password", { variant: "error" });

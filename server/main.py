@@ -1,6 +1,4 @@
 from http.client import HTTPResponse
-from signal import sigpending
-from urllib import response
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import HTTPException

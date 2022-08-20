@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import HTTPException
 from fastapi.responses import HTMLResponse, RedirectResponse
-from model import SignUp, Login, coding_events
+from model import SignUp, Login, cultural_events
 
 
 from database import signin
@@ -49,10 +49,10 @@ async def register_login(login:Login):
 
 
 
-@app.post("/coding", response_model=coding_events, status_code=200)
-async def coding_events_func(event: coding_events):
+@app.post("/coding", response_model=cultural_events, status_code=200)
+async def coding_events_func(event: cultural_events):
     response = await register_coding_events(event)
     if response:
         return response
-    raise HTTPException(404,f"there is no events ")
+    raise HTTPException(404,"there are no events")
 

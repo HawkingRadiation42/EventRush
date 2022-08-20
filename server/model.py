@@ -15,7 +15,7 @@ class Login(BaseModel):
     email: str
     password: str 
 
-class coding_events(BaseModel):
+class cultural_events(BaseModel):
     number_of_events: int
     college_name: str
     event_name: str

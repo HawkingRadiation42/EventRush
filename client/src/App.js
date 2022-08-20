@@ -4,6 +4,8 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
 import Coding from "./pages/Coding";
+import Profile from "./pages/Profile";
+import Event from "./pages/Event";
 
 export const endpoint = "http://127.0.0.1:8000";
 
@@ -14,7 +16,9 @@ const App = () => {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/" element={<Home />} />
-        <Route path="/coding" element={<Coding />} />
+        <Route path="/cultural" element={<Coding />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/event" element={<Event />} />
       </Routes>
     </div>
   );

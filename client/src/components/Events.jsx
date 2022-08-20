@@ -17,34 +17,35 @@ const Events = () => {
     <div className="flex flex-col justify-center items-center mb-5">
       <img src={event} alt="title" className="max-w-xs" />
       <div className="grid grid-cols-4 gap-10 mt-5 h-full">
-        <div className="flex flex-col blurAni blurAniheight justify-center items-center h-full mt-5">
-          <img
-            src={culture}
-            alt="title"
-            className="max-w-xs rounded-t-lg h-full w-full"
-          />
-          <div className="flex blurAniheight justify-between items-center text-white text-3xl p-5 h-full bg-black w-full rounded-b-lg">
-            <h1>
-              Cultural <br></br> Events
-            </h1>
-            <img src={arrow} alt="title" className="w-8" />
-          </div>
-        </div>
-        <Link to="/coding">
-          <div className="flex flex-col justify-center blurAniheight blurAni items-center h-full mt-5">
+        <Link to="/cultural">
+          <div className="flex flex-col blurAni blurAniheight justify-center items-center h-full mt-5">
             <img
-              src={coding}
+              src={culture}
               alt="title"
-              className="max-w-xs rounded-t-lg w-full h-full"
+              className="max-w-xs rounded-t-lg h-full w-full"
             />
-            <div className="flex justify-between items-center text-white text-3xl p-5 h-full bg-fuchsia-900 w-full rounded-b-lg">
+            <div className="flex blurAniheight justify-between items-center text-white text-3xl p-5 h-full bg-black w-full rounded-b-lg">
               <h1>
-                Coding <br></br> Events
+                Cultural <br></br> Events
               </h1>
               <img src={arrow} alt="title" className="w-8" />
             </div>
           </div>
         </Link>
+
+        <div className="flex flex-col justify-center blurAniheight blurAni items-center h-full mt-5">
+          <img
+            src={coding}
+            alt="title"
+            className="max-w-xs rounded-t-lg w-full h-full"
+          />
+          <div className="flex justify-between items-center text-white text-3xl p-5 h-full bg-fuchsia-900 w-full rounded-b-lg">
+            <h1>
+              Coding <br></br> Events
+            </h1>
+            <img src={arrow} alt="title" className="w-8" />
+          </div>
+        </div>
         <div className="flex flex-col blurAniheight blurAni justify-center items-center h-full mt-5">
           <img
             src={sport}

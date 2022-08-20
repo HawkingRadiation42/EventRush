@@ -1,5 +1,5 @@
 from http.client import HTTPResponse
-from signal import sigpending
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import HTTPException
@@ -10,7 +10,9 @@ from model import Signup, Login, Login_response
 from database import(
     register
 )
-from server.database import singin
+
+
+
 app = FastAPI()
 
 

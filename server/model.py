@@ -1,5 +1,3 @@
-from ast import Str
-import email
 from pydantic import BaseModel
 
 class Singup(BaseModel):

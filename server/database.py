@@ -1,10 +1,15 @@
 
 from model import SignUp, Login, Register
 from fastapi import HTTPException
+from pymongo import MongoClient
+
+
 #mongodb driver
 import motor.motor_asyncio
 
-client = motor.motor_asyncio.AsyncIOMotorClient('localhost', 27017)
+client = pymongo.MongoClient("mongodb+srv://hawkingradiation:shreyk@cluster0.y1uabs9.mongodb.net/?retryWrites=true&w=majority")
+db = client.test
+client = motor.motor_asyncio.AsyncIOMotorClient(client, 27017)
 
 
 database = client.Authentication

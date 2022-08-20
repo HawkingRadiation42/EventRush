@@ -1,0 +1,7 @@
+.backDrop{
+    background-image: url('../assets/OneirosBackdrop.jpg');
+    height: 20em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+}

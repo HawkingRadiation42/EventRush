@@ -40,8 +40,24 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-      <div>
-        <FaUserAlt className="text-yellow-800 text-2xl" />
+      <div className="flex">
+        {/* <FaUserAlt className="text-yellow-800 text-2xl" /> */}
+        <Link to="/signin">
+          <button
+            type="button"
+            class="focus:outline-none text-white bg-orange-500 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 "
+          >
+            Log In
+          </button>{" "}
+        </Link>
+        <Link to="/signup">
+          <button
+            type="button"
+            class="focus:outline-none text-white bg-orange-500 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 "
+          >
+            Register
+          </button>
+        </Link>
       </div>
     </nav>
   );

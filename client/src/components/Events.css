@@ -1,0 +1,7 @@
+.culture {
+  background-image: url("../assets/culture.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 10vh;
+}

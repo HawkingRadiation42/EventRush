@@ -34,7 +34,9 @@ const SignUp = () => {
   };
 
   useEffect(() => {
-    sendData();
+    if (imageurl) {
+      sendData();
+    }
   }, [imageurl]);
 
   const sendData = async () => {
@@ -117,7 +119,7 @@ const SignUp = () => {
       const storageRef = ref(storage, `${email}/${name}`);
       await uploadBytes(storageRef, file).then((snapshot) => {
         console.log("Uploaded a blob or file!");
-        getDownloadURL(ref(storage, `jklu/${email}/${name}`)).then((url) =>
+        getDownloadURL(ref(storage, `${email}/${name}`)).then((url) =>
           setImageurl(url)
         );
       });

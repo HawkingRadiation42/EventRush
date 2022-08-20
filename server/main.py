@@ -1,9 +1,8 @@
 from http.client import HTTPResponse
-from signal import sigpending
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import HTTPException
-from fastapi.responses import HTMLResponse, RedirectResponse
 from model import SignUp, Login
 
 

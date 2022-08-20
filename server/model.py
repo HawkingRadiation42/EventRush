@@ -19,7 +19,7 @@ class cultural_events(BaseModel):
     college_name: str
     event_name: str
     event_type: str
-    registered_participants: int 
-    
+    registered_participants: int = 1
+
 
 

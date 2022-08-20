@@ -90,6 +90,9 @@ const SignUp = () => {
 
   const handleUploadClick = (e) => {
     e.preventDefault();
+    const file = document.getElementById("upload").files[0];
+    const button = document.getElementById("uploadtext");
+    button.innerHTML = file.name;
   };
 
   const handleSubmit = async (e) => {

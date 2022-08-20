@@ -9,6 +9,7 @@ client = motor.motor_asyncio.AsyncIOMotorClient('localhost', 27017)
 
 database = client.Authentication
 collection = database.authentication
+registeration = database.
 print("connection successfull!")
 
 

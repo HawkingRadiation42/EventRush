@@ -6,6 +6,8 @@ import { BsGenderAmbiguous } from "react-icons/bs";
 import { GiDiploma } from "react-icons/gi";
 import logo from "../assets/EVENTrush.svg";
 import "./SignUpPage.css";
+import Rectangle from "../assets/Line 3.svg";
+
 
 const SignUpForm = ({
   handleTextChange,
@@ -121,6 +123,7 @@ const SignUpForm = ({
           </div>
         </div>
 
+
         <div className="mb-2">
           <label
             for="confirm_password"
@@ -128,7 +131,9 @@ const SignUpForm = ({
           >
             College/University Name
           </label>
+          
           <div className="flex items-center border rounded-lg focus:border-orange-500">
+            
             <FaUniversity className="text-gray-600" />
             <input
               type="text"
@@ -161,6 +166,7 @@ const SignUpForm = ({
             onChange={handleTextChange}
           />
         </div>
+        
         <div className="flex items-start mb-6">
           <div className="flex items-center h-5">
             <input
@@ -195,6 +201,7 @@ const SignUpForm = ({
       <hr />
     </div>
     <div className="flex flex-col">
+      <div className="flex flex-row-reverse">
       <img
         src={upload}
         alt="img"
@@ -208,6 +215,9 @@ const SignUpForm = ({
         id="upload"
         onChange={handleUploadClick}
       ></input>
+        <img className="w-1" src={Rectangle} alt="EventRushLogo" />
+
+      </div>
       <p className="text-center" id="uploadtext">
         Upload your Profile Picture Above
       </p>

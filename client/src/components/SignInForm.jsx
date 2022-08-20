@@ -1,6 +1,7 @@
 import logo from "../assets/EVENTrush.svg";
 import { MdAlternateEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
+import { Link } from "react-router-dom"
 
 const SignInForm = ({ handleTextChange, handleSubmit }) => (
   <div className="flex justify-center items-center bg-white w-5/12 h-full rounded">
@@ -78,9 +79,9 @@ const SignInForm = ({ handleTextChange, handleSubmit }) => (
         </div>
         <h2 className="font mb-20">
           Don't have an account yet?{" "}
-          <a href="#">
+          <Link to="/signup">
             <span className="text-orange-400 font-bold"> Sign Up </span>
-          </a>
+          </Link>
         </h2>
       </form>
     </div>

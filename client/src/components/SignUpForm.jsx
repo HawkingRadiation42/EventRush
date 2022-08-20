@@ -13,7 +13,7 @@ const SignUpForm = ({
   handleUploadImageClick,
   handleSubmit,
 }) => (
-  <div className="flex justify-center items-center bg-white w-8/12">
+  <div className="flex justify-center items-center bg-white w-8/12 mt-20 pt-20">
     <div className="w-1/2 flex justify-center flex-col items-center">
       <img className="mb-6 mt-16" src={logo} alt="EventRushLogo" />
       <h2 className="font text-2xl font-semibold mb-9">

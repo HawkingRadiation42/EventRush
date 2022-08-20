@@ -35,3 +35,6 @@ async def signin(login):
         raise HTTPException(status_code=400, detail="Incorrect username or password")
     # return result
     return result
+
+async def register_events():
+    return 1

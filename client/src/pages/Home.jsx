@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Events from "../components/Events";
-// import Footer from "../components/Footer";
 import footer from "../assets/footer.svg";
 
 const Home = () => {

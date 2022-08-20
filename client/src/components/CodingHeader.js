@@ -1,5 +1,5 @@
 import React from "react";
-import ctitle from "../assets/codingHeader.svg";
+import ctitle from "../assets/culturalHeader.svg";
 import left from "../assets/left.svg";
 import right from "../assets/right.svg";
 import filter from "../assets/filter.svg";

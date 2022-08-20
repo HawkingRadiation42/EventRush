@@ -40,7 +40,6 @@ async def register_login(login:Login):
     # details = login.dict()
     # Email = login.email
     response = await signin(login)
-    print(response)
     # if response:
     #     return response
     return response

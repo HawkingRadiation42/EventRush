@@ -9,7 +9,7 @@ import Event from "./pages/Event";
 import Oneiros from "./pages/Oneiros";
 
 export const endpoint =
-  "https://8000-hawkingradiation-jklu-ddrvtgsmf8i.ws-us62.gitpod.io";
+"https://8000-hawkingradiation-jklu-alk39kpbkve.ws-us62.gitpod.io/";
 
 const App = () => {
   return (
@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/cultural" element={<Coding />} />
         <Route path="/myevents" element={<MyEvents />} />
         <Route path="/event" element={<Event />} />
-        <Route path="/event/Oneiros" element={<Oneiros />} />
+        <Route path="/event/oneiros" element={<Oneiros />} />
       </Routes>
     </div>
   );

@@ -15,9 +15,9 @@ const MyEvents = () => {
         <img src={eventsMap} alt="eventsMap" className=" mt-24 mb-5" />
         <div className="flex justify-center items-center w-full bg-white mt-5 rounded-lg border border-gray-200 shadow-md">
           <div className="flex flex-col justify-center items-center w-full rounded-lg border border-gray-200 shadow-md p-5">
-            <p className="font-semibold text-2xl">@HawkingRadiation</p>
+            <p className="font-semibold text-2xl">@{localStorage.getItem("name")}</p>
             <p className="text-purple-800 text-4xl font-bold uppercase w-full text-center">
-              Manipal University Jaipur
+              {localStorage.getItem("college_name")}
             </p>
             <Calender />
           </div>

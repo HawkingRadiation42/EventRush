@@ -43,8 +43,15 @@ const SignIn = () => {
     }
     try {
       const res = await axios.post(`${endpoint}/login`, data);
+      console.log(res);
       if (res.status === 200) {
         enqueueSnackbar("Logged in successfully", { variant: "success" });
+        console.log(res);
+        localStorage.setItem("loggedin", true);
+        localStorage.setItem("email", res.data.email);
+        localStorage.setItem("name", res.data.name);
+        localStorage.setItem("college_name", res.data.college_name);
+        localStorage.setItem("dp", res.data.profile_URL);
         setLoading(false);
         navigate("/");
       }

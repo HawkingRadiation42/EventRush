@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 
 const EventsTable = () => {
   return (
@@ -19,12 +20,14 @@ const EventsTable = () => {
             <p>Cultural Fest</p>
           </div>
           <div className="flex flex-col justify-center align-center">
+          <Link to="/event/oneiros">
             <button
               type="button"
               class="focus:outline-none text-white bg-orange-500 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 "
             >
               Register
             </button>
+            </Link>
           </div>
         </div>
         <div className="flex justify-between items-center bg-white p-5 border rounded-lg">

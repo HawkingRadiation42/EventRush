@@ -10,6 +10,7 @@ import digital from "../assets/digital.svg";
 import tech from "../assets/tech.jpg";
 import esport from "../assets/esport.svg";
 import debate from "../assets/debate.svg";
+import { Link } from "react-router-dom";
 
 const Events = () => {
   return (
@@ -29,19 +30,21 @@ const Events = () => {
             <img src={arrow} alt="title" className="w-8" />
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center h-full mt-5">
-          <img
-            src={coding}
-            alt="title"
-            className="max-w-xs rounded-t-lg w-full"
-          />
-          <div className="flex justify-between items-center text-white text-3xl p-5 bg-fuchsia-900 w-full rounded-b-lg">
-            <h1>
-              Coding <br></br> Events
-            </h1>
-            <img src={arrow} alt="title" className="w-8" />
+        <Link to="/coding">
+          <div className="flex flex-col justify-center items-center h-full mt-5">
+            <img
+              src={coding}
+              alt="title"
+              className="max-w-xs rounded-t-lg w-full"
+            />
+            <div className="flex justify-between items-center text-white text-3xl p-5 bg-fuchsia-900 w-full rounded-b-lg">
+              <h1>
+                Coding <br></br> Events
+              </h1>
+              <img src={arrow} alt="title" className="w-8" />
+            </div>
           </div>
-        </div>
+        </Link>
         <div className="flex flex-col justify-center items-center h-full mt-5">
           <img
             src={sport}

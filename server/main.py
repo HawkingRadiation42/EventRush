@@ -33,7 +33,7 @@ async def registering_signup(signup: SignUp):
     response = await register(signup.dict())
     if response:
         print("post successfull!")
-        return response
+        return 
     raise HTTPException(400, "something went wrong/bad request")
     
 
@@ -42,9 +42,8 @@ async def register_login(login:Login):
     # details = login.dict()
     # Email = login.email
     response = await signin(login)
-    # if response:
-    #     return response
-    return response
+    if response:
+        return 
     # raise HTTPException(400, f"something went wrong/bad request {}")
 
 

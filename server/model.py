@@ -1,7 +1,9 @@
+from ast import Str
 import email
 from pydantic import BaseModel
 
-class singup(BaseModel):
+class Singup(BaseModel):
+    profile_url: str
     Name: str
     college: str 
     mobile: int
@@ -10,11 +12,11 @@ class singup(BaseModel):
     image_url: str
 
 
-class login(BaseModel):
+class Login(BaseModel):
     email: str
     password: str 
 
-class login_response(BaseModel):
+class Login_response(BaseModel):
     name: str
     college: str
     mobile: int

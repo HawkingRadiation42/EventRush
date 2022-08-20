@@ -1,5 +1,5 @@
-from unittest import result
-from model import singup, login, login_response
+
+from model import Singup, Login, Login_response
 
 #mongodb driver
 import motor.motor_asyncio
@@ -12,15 +12,19 @@ database = client.Authentication
 collection = database.authentication
 print("connection successfull!")
 
-async def register(singup):
-    document = singup
+
+
+async def register(Singup):
+    document = Singup
     result = await collection.insert_one(document)
+    print(result)
     return document
 
 
-async def singin(login):
-    document = login
+async def singin(Login):
+    document = Login
     result = await collection.insert_one(document)
+    print(result)
     return document
 
 async def login_response():

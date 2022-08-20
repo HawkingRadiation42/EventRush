@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import HTTPException
 from fastapi.responses import HTMLResponse, RedirectResponse
-from model import signup, login, login_response
+from model import Signup, Login, Login_response
 
 
 from database import(
@@ -26,17 +26,16 @@ app.add_middleware(
 )
 
 
-@app.post("/register", response_model=signup)
-async def registering_signup(signup: signup):
+@app.post("/register", response_model=Signup, status_code=201)
+async def registering_signup(signup: Signup):
     response = await register(signup.dict())
     if response:
         return response
     raise HTTPException(400, "something went wrong/bad request")
     
 
-
-@app.post("/singup", response_model=login)
-async def register_login(login:login):
+@app.post("/singup", response_model=Login, status_code=200)
+async def register_login(login:Login):
     response = await register(login.dict())
     if response:
         return response 

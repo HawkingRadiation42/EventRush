@@ -1,12 +1,18 @@
 import React from "react";
 import "./SignIn.css";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a3b18c3 (css added (started))
 import { MdAlternateEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> df66ad7 (login layout started)
+=======
+>>>>>>> a3b18c3 (css added (started))
 
 const SignIn = () => {
   return (

@@ -5,7 +5,7 @@ class SignUp(BaseModel):
     profile_URL: str
     email: str
     password: str
-    Name: str
+    name: str
     age: int
     gender: str
     college_name: str 

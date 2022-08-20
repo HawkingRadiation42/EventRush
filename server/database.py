@@ -6,8 +6,7 @@ from pymongo import MongoClient
 #mongodb driver
 #import motor.motor_asyncio
 
-client = MongoClient("mongodb+srv://hawkingradiation:1234@cluster0.y1uabs9.mongodb.net/?retryWrites=true&w=majority")
-client = MongoClient("mongodb+srv://hawkingradiation:1234@cluster0.y1uabs9.mongodb.net/?retryWrites=true&w=majority")
+client = MongoClient(MOGODB_URL_KEY)
 
 db = client.event_rush
 #client = motor.motor_asyncio.AsyncIOMotorClient(client, 27017)

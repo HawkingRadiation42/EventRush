@@ -16,10 +16,10 @@ class Login(BaseModel):
     password: str 
 
 class cultural_events(BaseModel):
-    number_of_events: int
     college_name: str
     event_name: str
     event_type: str
-    registeration_left: Optional[bool] = 1
+    registered_participants: int 
+    
 
 

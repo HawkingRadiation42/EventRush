@@ -38,6 +38,6 @@ async def signin(login):
 
 
 
-async def register_cultural_events():
+async def register_cultural_events(event):
 
     return 1

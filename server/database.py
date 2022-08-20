@@ -5,7 +5,7 @@ from model import singup, login, login_response
 import motor.motor_asyncio
 
 
-client = motor.motor_asyncio.AsyncIOMotorClient('localhost', 27017)
+client = motor.motor_asyncio.AsmoyncIOMotorClient('localhost', 27017)
 
 
 database = client.Authentication

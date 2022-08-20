@@ -4,12 +4,14 @@ from pydantic import BaseModel
 
 class Singup(BaseModel):
     profile_url: str
-    Name: str
-    college: str 
-    mobile: int
     email: str
     password: str
-    image_url: str
+    Name: str
+    age: int
+    gender: str
+    college_name: str 
+    college_email = str
+
 
 
 class Login(BaseModel):

@@ -1,4 +1,4 @@
-# jklu hackathon
+# Hack JKLU
 ## Description
 
 Campus rush is an Event/Fest registrations website. Build using React for the Front-end and Fast API for the Back-end.

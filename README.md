@@ -1,4 +1,4 @@
-=======
+
 # Hack JKLU
 
 ## Description

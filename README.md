@@ -54,6 +54,7 @@ After the registration is done an Email is sent to their (user) respective ID wi
 Making it just a Scan and Go process.
 
 ## Advantages-
+
 1. Simplify the registration process.
 2. Having a personal Event Calendar.
 3. Help control the crowd.

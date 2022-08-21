@@ -13,6 +13,7 @@ import axios from "axios";
 import { endpoint } from "../App";
 import { useSnackbar } from "notistack";
 import QRCode from "react-qr-code";
+import qr from "../assets/qrcode.png";
 const { AuthContext } = require("../AuthContext");
 
 const OneirosComp = () => {
@@ -50,8 +51,6 @@ const OneirosComp = () => {
     event_time: event_time1,
   };
 
-  const names = name1;
-
   const handleRegister = async (e) => {
     e.preventDefault();
     // try {
@@ -59,6 +58,17 @@ const OneirosComp = () => {
     // if (res.status === 200) {
     enqueueSnackbar("Registered successfully", { variant: "success" });
     setRegister(true);
+    await fetch(
+      "https://api.twilio.com/2010-04-01/Accounts/AC352e9cf334212ae6dd4bbccf2317d932/Messages.json",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          Authorization: "Basic " + btoa(process.env.TWILIO_API),
+        },
+        body: "To=+919818622192&MessagingServiceSid=MGa5e0b9d1b27f276b2d4342afba7b8acb&Body=Congratulations! You have been registered for Oneiros. Your unique registration id is 187ybji1. Please show this id at the registration desk.",
+      }
+    );
     //   }
     // } catch (error) {
     //   enqueueSnackbar("Something went wrong", { variant: "error" });
@@ -243,12 +253,7 @@ const OneirosComp = () => {
         <div className="flex justify-center flex-col items-center mt-5">
           <h1 className="text-3xl font-bold">Your Registration</h1>
           {register1 ? (
-            <QRCode
-              size={256}
-              style={{ height: "auto", maxWidth: "10rem", width: "10rem" }}
-              value="You are registered for Oneiros"
-              viewBox={`0 0 256 256`}
-            />
+            <img src={qr} alt="title" className="w-2/12 h-2/12 p-2" />
           ) : (
             <h1 className="font-bold">No Registration Found</h1>
           )}

@@ -10,9 +10,11 @@ import { Link } from "react-router-dom";
 const { AuthContext } = require("../AuthContext");
 
 const MyEvents = () => {
-  const { name, college_name } = React.useContext(AuthContext);
+  const { name, college_name, register } = React.useContext(AuthContext);
   const [name1, setName] = name;
   const [college_name1, setCollege_name] = college_name;
+  const [register1, setRegister] = register;
+
   return (
     <div className="bg-stone-100 min-h-screen">
       <Navbar />
@@ -29,34 +31,67 @@ const MyEvents = () => {
           <div className="flex justify-between items-center flex-col w-full p-5">
             <img src={reg} alt="univ" className="w-3/5" />
             <div className="flex flex-col justify-center align-center w-full mt-5">
-              <div className="flex justify-between items-center bg-white p-5 border rounded-lg">
-                <BsCircleFill color="green" size={15} />
-                <div className="flex flex-col justify-center align-center">
-                  <p className="font-bold">Oneiros</p>
-                  <p>Manipal Univerity Jaipur</p>
+              {register1 ? (
+                <div className="flex justify-between items-center bg-white p-5 border rounded-lg">
+                  <BsCircleFill color="green" size={15} />
+                  <div className="flex flex-col justify-center align-center">
+                    <p className="font-bold">Oneiros</p>
+                    <p>Manipal Univerity Jaipur</p>
+                  </div>
+                  <div className="flex flex-col justify-center align-center">
+                    <p className="font-bold">Date</p>
+                    <p>28 Aug 2022</p>
+                  </div>
+                  <div className="flex flex-col justify-center align-center">
+                    <p className="font-bold">Event Type</p>
+                    <p>Cultural Fest</p>
+                  </div>
+                  <div className="flex flex-col justify-center align-center">
+                    <Link to="/event/oneiros">
+                      <button
+                        type="button"
+                        class="focus:outline-none text-white bg-orange-500 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 "
+                      >
+                        Know More
+                      </button>
+                    </Link>
+                  </div>
                 </div>
-                <div className="flex flex-col justify-center align-center">
-                  <p className="font-bold">Date</p>
-                  <p>16 Oct 2022</p>
-                </div>
-                <div className="flex flex-col justify-center align-center">
-                  <p className="font-bold">Event Type</p>
-                  <p>Cultural Fest</p>
-                </div>
-                <div className="flex flex-col justify-center align-center">
-                  <Link to="/event/oneiros">
-                    <button
-                      type="button"
-                      class="focus:outline-none text-white bg-orange-500 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 "
-                    >
-                      Know More
-                    </button>
-                  </Link>
-                </div>
-              </div>
+              ) : (
+                <h1 className="text-center">No Registration found</h1>
+              )}
             </div>
             <img src={univ} alt="univ" className="w-3/5 mt-5" />
             <div className="flex flex-col justify-center align-center w-full mt-5">
+              {register1 ? (
+                <></>
+              ) : (
+                <div className="flex justify-between items-center bg-white p-5 border rounded-lg">
+                  <BsCircleFill color="orange" size={15} />
+                  <div className="flex flex-col justify-center align-center">
+                    <p className="font-bold">Oneiros</p>
+                    <p>Manipal Univerity Jaipur</p>
+                  </div>
+                  <div className="flex flex-col justify-center align-center">
+                    <p className="font-bold">Date</p>
+                    <p>28 Aug 2022</p>
+                  </div>
+                  <div className="flex flex-col justify-center align-center">
+                    <p className="font-bold">Event Type</p>
+                    <p>Cultural Fest</p>
+                  </div>
+                  <div className="flex flex-col justify-center align-center">
+                    <Link to="/event/oneiros">
+                      <button
+                        type="button"
+                        class="focus:outline-none text-white bg-orange-500 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 "
+                      >
+                        Register
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              )}
               <div className="flex justify-between items-center bg-white p-5 border rounded-lg">
                 <BsCircleFill color="orange" size={15} />
                 <div className="flex flex-col justify-center align-center">
@@ -65,7 +100,7 @@ const MyEvents = () => {
                 </div>
                 <div className="flex flex-col justify-center align-center">
                   <p className="font-bold">Date</p>
-                  <p>13 Sep 2022</p>
+                  <p>22 Aug 2022</p>
                 </div>
                 <div className="flex flex-col justify-center align-center">
                   <p className="font-bold">Event Type</p>
@@ -88,7 +123,7 @@ const MyEvents = () => {
                 </div>
                 <div className="flex flex-col justify-center align-center">
                   <p className="font-bold">Date</p>
-                  <p>20 Aug 2022</p>
+                  <p>25 Aug 2022</p>
                 </div>
                 <div className="flex flex-col justify-center align-center">
                   <p className="font-bold">Event Type</p>

@@ -246,7 +246,7 @@ const OneirosComp = () => {
             <QRCode
               size={256}
               style={{ height: "auto", maxWidth: "10rem", width: "10rem" }}
-              value={names}
+              value="You are registered for Oneiros"
               viewBox={`0 0 256 256`}
             />
           ) : (

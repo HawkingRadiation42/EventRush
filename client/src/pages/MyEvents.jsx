@@ -6,6 +6,7 @@ import univ from "../assets/University Events.svg";
 import reg from "../assets/Registered Events.svg";
 import { BsCircleFill } from "react-icons/bs";
 import footer from "../assets/footer.svg";
+import { Link } from "react-router-dom";
 const { AuthContext } = require("../AuthContext");
 
 const MyEvents = () => {
@@ -43,12 +44,14 @@ const MyEvents = () => {
                   <p>Cultural Fest</p>
                 </div>
                 <div className="flex flex-col justify-center align-center">
-                  <button
-                    type="button"
-                    class="focus:outline-none text-white bg-orange-500 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 "
-                  >
-                    Register
-                  </button>
+                  <Link to="/event/oneiros">
+                    <button
+                      type="button"
+                      class="focus:outline-none text-white bg-orange-500 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 "
+                    >
+                      Know More
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

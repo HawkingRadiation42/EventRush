@@ -12,6 +12,7 @@ import OneirosLogo from "../assets/ONEIROS.svg";
 import axios from "axios";
 import { endpoint } from "../App";
 import { useSnackbar } from "notistack";
+import QRCode from "react-qr-code";
 const { AuthContext } = require("../AuthContext");
 
 const OneirosComp = () => {
@@ -24,6 +25,7 @@ const OneirosComp = () => {
     event_date,
     event_type,
     event_time,
+    register,
   } = React.useContext(AuthContext);
   const [name1, setName] = name;
   const [email1, setEmail] = email;
@@ -33,6 +35,7 @@ const OneirosComp = () => {
   const [event_date1, setEvent_date] = event_date;
   const [event_type1, setEvent_type] = event_type;
   const [event_time1, setEvent_time] = event_time;
+  const [register1, setRegister] = register;
 
   const { enqueueSnackbar } = useSnackbar();
 
@@ -47,16 +50,23 @@ const OneirosComp = () => {
     event_time: event_time1,
   };
 
+  const names = name1;
+
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
       const res = await axios.post(`${endpoint}/registration`, data);
       if (res.status === 200) {
         enqueueSnackbar("Registered successfully", { variant: "success" });
+        setRegister(true);
       }
     } catch (error) {
       enqueueSnackbar("Something went wrong", { variant: "error" });
     }
+  };
+
+  const handleUnregister = async (e) => {
+    setRegister(false);
   };
 
   return (
@@ -97,19 +107,31 @@ const OneirosComp = () => {
             Event Fee: <span className="font-semibold text-white">Free</span>
           </p>
 
-          <button
-            type="button"
-            className="w-8/12 p-1.5 ml-[3em] text-white bg-orange-400 rounded bg-opacity-40"
-            onClick={handleRegister}
-          >
-            Register{" "}
-          </button>
-          <center>
-            <p className="text-white text-xs">
-              Hurry only <span className="font-bold text-orange-400">1</span>{" "}
-              seat left
-            </p>
-          </center>
+          {register1 ? (
+            <button
+              type="button"
+              className="w-8/12 p-1.5 ml-[3em] text-white bg-green-400 rounded bg-opacity-40"
+              onClick={handleUnregister}
+            >
+              Unregister
+            </button>
+          ) : (
+            <>
+              <button
+                type="button"
+                className="w-8/12 p-1.5 ml-[3em] text-white bg-orange-400 rounded bg-opacity-40"
+                onClick={handleRegister}
+              >
+                Register{" "}
+              </button>
+              <center>
+                <p className="text-white text-xs">
+                  Hurry only{" "}
+                  <span className="font-bold text-orange-400">1</span> seat left
+                </p>
+              </center>
+            </>
+          )}
         </div>
       </div>
 
@@ -210,6 +232,15 @@ const OneirosComp = () => {
           <img src={sponsor4} alt="title" className="w-2/12 h-2/12 p-2" />
           <img src={sponsor5} alt="title" className="w-2/12 h-2/12 p-2" />
           <img src={sponsor6} alt="title" className="w-2/12 h-2/12 p-2" />
+        </div>
+        <div className="flex justify-center flex-col items-center">
+          <h1>Your Registration</h1>
+          <QRCode
+            size={256}
+            style={{ height: "auto", maxWidth: "10rem", width: "10rem" }}
+            value={names}
+            viewBox={`0 0 256 256`}
+          />
         </div>
       </div>
     </div>

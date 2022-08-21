@@ -7,7 +7,7 @@ import { useSnackbar } from "notistack";
 import axios from "axios";
 import { endpoint } from "../App";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -19,6 +19,7 @@ const SignUp = () => {
   const [collegeEmail, setCollegeEmail] = useState("");
   const [imageurl, setImageurl] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [mobile, setMobile] = useState("");
   const storage = getStorage(app);
   const { enqueueSnackbar } = useSnackbar();
   const navigate = useNavigate();
@@ -32,6 +33,7 @@ const SignUp = () => {
     gender: gender,
     college_name: college,
     c_email: collegeEmail,
+    mobile: mobile,
   };
 
   useEffect(() => {
@@ -79,6 +81,9 @@ const SignUp = () => {
       case "collegeEmail":
         setCollegeEmail(value);
         break;
+      case "mobile":
+        setMobile(value);
+        break;
       default:
         break;
     }
@@ -106,7 +111,8 @@ const SignUp = () => {
       !age ||
       gender.length === 0 ||
       college.length === 0 ||
-      collegeEmail.length === 0
+      collegeEmail.length === 0 ||
+      mobile.length === 0
     ) {
       enqueueSnackbar("Please fill all the fields", { variant: "warning" });
       setLoading(false);

@@ -1,42 +1,9 @@
-aiohttp @ file:///Users/runner/miniforge3/conda-bld/aiohttp_1649013213177/work
-aiosignal @ file:///home/conda/feedstock_root/build_artifacts/aiosignal_1636093929600/work
-anyio @ file:///home/conda/feedstock_root/build_artifacts/anyio_1660053721269/work/dist
-argon2-cffi @ file:///opt/conda/conda-bld/argon2-cffi_1645000214183/work
-argon2-cffi-bindings @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/croot-wbf5edig/argon2-cffi-bindings_1644845754377/work
-asgiref @ file:///tmp/build/80754af9/asgiref_1625643473416/work
-async-timeout @ file:///home/conda/feedstock_root/build_artifacts/async-timeout_1640026696943/work
-attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1659291887007/work
-bcrypt @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_03v55xv0yj/croots/recipe/bcrypt_1659554335339/work
-cffi @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_f9af_qffaa/croots/recipe/cffi_1659598650277/work
-charset-normalizer @ file:///home/conda/feedstock_root/build_artifacts/charset-normalizer_1655906222726/work
-click @ file:///Users/runner/miniforge3/conda-bld/click_1651215239605/work
-cryptography @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_5871d1ea-0250-4cd7-ac89-4b1e60514f5daqk8t0ow/croots/recipe/cryptography_1652101128666/work
-dnspython==2.2.1
-ecdsa @ file:///tmp/build/80754af9/ecdsa_1622554921100/work
-fastapi @ file:///home/conda/feedstock_root/build_artifacts/fastapi_1660871664908/work
-frozenlist @ file:///Users/runner/miniforge3/conda-bld/frozenlist_1659556995630/work
-future @ file:///Users/ktietz/ci_310/future_1643965899852/work
-h11 @ file:///home/conda/feedstock_root/build_artifacts/h11_1652727116927/work
-idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1642433548627/work
-Jinja2 @ file:///opt/conda/conda-bld/jinja2_1647436528585/work
-MarkupSafe @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_12c133f5-0720-4727-9c18-599a3af825723lzwham3/croots/recipe/markupsafe_1654597866058/work
-motor @ file:///home/conda/feedstock_root/build_artifacts/motor_1651187348054/work
-multidict @ file:///Users/runner/miniforge3/conda-bld/multidict_1648882571854/work
-passlib==1.7.4
-pyasn1 @ file:///Users/ktietz/demo/mc3/conda-bld/pyasn1_1629708007385/work
-pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
-pycryptodome @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_eee3f5a6-2d89-4640-9ba1-94892817df5fo26yp9yb/croots/recipe/pycryptodome_1658311005549/work
-pydantic @ file:///Users/runner/miniforge3/conda-bld/pydantic_1660286281181/work
-pymongo @ file:///Users/runner/miniforge3/conda-bld/pymongo_1658783254996/work
-python-dotenv @ file:///home/conda/feedstock_root/build_artifacts/python-dotenv_1648162816482/work
-python-jose @ file:///tmp/build/80754af9/python-jose_1623673016654/work
-python-multipart==0.0.5
-rsa @ file:///tmp/build/80754af9/rsa_1614366226499/work
-six @ file:///tmp/build/80754af9/six_1644875935023/work
-sniffio @ file:///Users/runner/miniforge3/conda-bld/sniffio_1648819417040/work
-starlette @ file:///home/conda/feedstock_root/build_artifacts/starlette-recipe_1650649298613/work
-tornado @ file:///Users/runner/miniforge3/conda-bld/tornado_1656938163103/work
-typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1656706066251/work
-uvicorn @ file:///Users/ktietz/ci_310/uvicorn_1643971601087/work
-websockets @ file:///Users/runner/miniforge3/conda-bld/websockets_1650300381352/work
-yarl @ file:///Users/runner/miniforge3/conda-bld/yarl_1648966561602/work
+fastapi 
+Jinja2 
+pydantic 
+pymongo 
+starlette 
+uvicorn 
+motor
+sendgrid
+qrcode

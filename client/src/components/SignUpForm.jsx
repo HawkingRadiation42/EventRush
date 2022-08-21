@@ -80,6 +80,26 @@ const SignUpForm = ({
             />
           </div>
         </div>
+        <div className="mb-2">
+          <label
+            for="password"
+            className="block mb-2 text-sm font-bold text-indigo-900 "
+          >
+            Mobile Number
+          </label>
+          <div className="flex items-center border focus:border-orange-500 rounded-lg">
+            <FaUserAlt className="text-gray-600" />
+            <input
+              type="string"
+              id="mobile"
+              className=" text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:outline-none block w-full p-2.5 "
+              required=""
+              name="mobile"
+              placeholder="+91"
+              onChange={handleTextChange}
+            />
+          </div>
+        </div>
         <div className="grid gap-6 mb-2 md:grid-cols-2">
           <div>
             <label

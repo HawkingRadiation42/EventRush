@@ -10,6 +10,7 @@ class SignUp(BaseModel):
     gender: str
     college_name: str 
     c_email: Optional[str]
+    mobile: str
 
 class Login(BaseModel):
     email: str
@@ -33,3 +34,4 @@ class Register(BaseModel):
     event_date: str
     event_time: str
     event_type: str
+    mobile: str

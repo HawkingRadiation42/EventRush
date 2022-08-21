@@ -14,12 +14,14 @@ const SignIn = () => {
   const [loading, setLoading] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
   const navigate = useNavigate();
-  const { name, email, college_name, college_email } =
+  const { name, email, college_name, college_email, image, mobile } =
     React.useContext(AuthContext);
   const [name1, setName] = name;
   const [email1, setEmail] = email;
   const [college_name1, setCollege_name] = college_name;
   const [college_email1, setCollege_email] = college_email;
+  const [image1, setImage] = image;
+  const [mobile1, setMobile] = mobile;
 
   const data = {
     email: emailid,
@@ -56,6 +58,8 @@ const SignIn = () => {
         setCollege_name(res.data.college_name);
         setEmail(res.data.email);
         setCollege_email(res.data.c_email);
+        setImage(res.data.profile_URL);
+        setMobile(res.data.mobile);
         setLoading(false);
         navigate("/");
       }

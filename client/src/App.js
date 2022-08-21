@@ -17,9 +17,12 @@ const App = () => {
   const [email, setEmail] = useState("");
   const [event_name, setEvent_name] = useState("Oneiros");
   const [college_email, setCollege_email] = useState("");
+  const [image, setImage] = useState("");
   const [event_date, setEvent_date] = useState("16-10-2022");
   const [event_time, setEvent_time] = useState("09:00");
   const [event_type, setEvent_type] = useState("Cultural Fest");
+  const [register, setRegister] = useState(false);
+  const [mobile, setMobile] = useState("");
   return (
     <AuthContext.Provider
       value={{
@@ -28,9 +31,12 @@ const App = () => {
         email: [email, setEmail],
         event_name: [event_name, setEvent_name],
         college_email: [college_email, setCollege_email],
+        image: [image, setImage],
+        mobile: [mobile, setMobile],
         event_date: [event_date, setEvent_date],
         event_time: [event_time, setEvent_time],
         event_type: [event_type, setEvent_type],
+        register: [register, setRegister],
       }}
     >
       <div>

@@ -1,20 +1,15 @@
 from http.client import HTTPResponse
-#from signal import sigpending
-from urllib import response
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import HTTPException
 from fastapi.responses import HTMLResponse, RedirectResponse
 from model import SignUp, Login, Register
 
-import os
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
 
 from database import signin
 from database import register
 from database import register_event
-# from database import twillo_response
+
 
 app = FastAPI()
 
@@ -34,6 +29,14 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+# app.add_middleware(
+#     CORSMiddleware, 
+#     allow_origin = ["*"],
+#     allow_credentials = True,
+#     allow_methods = ["*"],
+#     allow_headers = ["*"],
+# )
+
 
 
 @app.post("/register", status_code=201)
@@ -74,16 +77,9 @@ async def register_login(login:Login):
 #     raise HTTPException(404, "there are no events to register")
 
 
-@app.post("/registration",status_code=200)
+@app.post("/registeration",status_code=200)
 async def registeration_event(register: Register):
     response = await register_event(register.dict())
     if response:
         return 
-        # email_twillo(register)
-        # image = twillo_response(register.dict())
-        # return image
     raise HTTPException(400, "something went wrong / bad request")
-
-
-
-#+17472985893 -twillo phone number

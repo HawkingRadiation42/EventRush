@@ -6,18 +6,18 @@
 Campus rush is an Event/Fest registrations website. Build using React for the Front-end and Fast API for the Back-end.
 
 ## Visuals
-SignUp/SignIn page-
-![App Screenshot](https://drive.goo![Slide 16_9 - 2](https://user-images.githubusercontent.com/74444060/185780139-0476e7e7-21ae-4ba1-a35f-73a2e46f72ed.png)
-gle.com/file/d/1nFjRGYkgqszPr_vDTojebs467xwouIAH/view)
+<h3> SignUp/SignIn page- </h3>
+![Slide 16_9 - 1](https://user-images.githubusercontent.com/85542328/185780539-d552f60d-7709-453e-8b70-faeb5c3ca742.png)
 
-SignUp Page-
-![App Screenshot](https://drive.google.com/file/d/1tUv4-Fci329kSB0OmFrVV6O4-367wSn6/view)
+<h3>SignUp Page- </h3>
+![Slide 16_9 - 4](https://user-images.githubusercontent.com/85542328/185780550-d7f52842-ca16-4bbd-8ca9-13f2e224c9ad.png)
 
-Home Page-
-![App Screenshot](https://drive.google.com/file/d/1gcussZ5AX3Kvt6yV6SxWYqO-uu-72_YF/view)
+<h3> Home Page- </h3>
+![Slide 16_9 - 8](https://user-images.githubusercontent.com/85542328/185780560-c626c4e4-3c83-4316-8c75-b5dedc18418c.png)
 
-Events Page-
-![App Screenshot](https://drive.google.com/file/d/1xoH7ryunn2d1CvgA5bed0MLD1jETRTJJ/view)
+<h3> Events Page- </h3>
+![Slide 16_9 - 10](https://user-images.githubusercontent.com/85542328/185780578-6c2fca62-69c6-44ef-a04e-d1d31bb2d40f.png)
+
 
 ## Installation
 

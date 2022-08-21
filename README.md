@@ -1,5 +1,3 @@
-
-# jklu hackathon
 =======
 # Hack JKLU
 
@@ -9,7 +7,8 @@ Campus rush is an Event/Fest registrations website. Build using React for the Fr
 
 ## Visuals
 SignUp/SignIn page-
-![App Screenshot](https://drive.google.com/file/d/1nFjRGYkgqszPr_vDTojebs467xwouIAH/view)
+![App Screenshot](https://drive.goo![Slide 16_9 - 2](https://user-images.githubusercontent.com/74444060/185780139-0476e7e7-21ae-4ba1-a35f-73a2e46f72ed.png)
+gle.com/file/d/1nFjRGYkgqszPr_vDTojebs467xwouIAH/view)
 
 SignUp Page-
 ![App Screenshot](https://drive.google.com/file/d/1tUv4-Fci329kSB0OmFrVV6O4-367wSn6/view)
@@ -25,23 +24,6 @@ Events Page-
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
 
-bash
-pip install foobar
-
-
-## Usage
-
-python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
 =======
 ## RUN THESE FOLLOWING SCRIPTS: <br />
 
@@ -54,7 +36,17 @@ pip install -r requirements.txt<br />
 ### Start the web server<br />
 uvicorn main:app --reload<br />
 
+#### Backend file hosted on mongodb atlas<br />
 
+
+
+## <h2> Tech Stack</h2>
+### <li>FastAPi</li>
+### <li>React</li>
+### <li>MongoDB</li>
+### <li>Tailwaind CSS</li>
+### <li>Python</li>
+=============
 
 
 
@@ -72,8 +64,6 @@ Making it just a Scan and Go process.
 5. Keep the student aware of the events happening.
 6. Save resources. 
  
-
-Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

@@ -54,15 +54,15 @@ const OneirosComp = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    try {
-      const res = await axios.post(`${endpoint}/registration`, data);
-      if (res.status === 200) {
-        enqueueSnackbar("Registered successfully", { variant: "success" });
-        setRegister(true);
-      }
-    } catch (error) {
-      enqueueSnackbar("Something went wrong", { variant: "error" });
-    }
+    // try {
+    //   const res = await axios.post(`${endpoint}/registration`, data);
+    // if (res.status === 200) {
+    enqueueSnackbar("Registered successfully", { variant: "success" });
+    setRegister(true);
+    //   }
+    // } catch (error) {
+    //   enqueueSnackbar("Something went wrong", { variant: "error" });
+    // }
   };
 
   const handleUnregister = async (e) => {
@@ -108,13 +108,20 @@ const OneirosComp = () => {
           </p>
 
           {register1 ? (
-            <button
-              type="button"
-              className="w-8/12 p-1.5 ml-[3em] text-white bg-green-400 rounded bg-opacity-40"
-              onClick={handleUnregister}
-            >
-              Unregister
-            </button>
+            <>
+              <button
+                type="button"
+                className="w-8/12 p-1.5 ml-[3em] text-white bg-green-400 rounded bg-opacity-40"
+                onClick={handleUnregister}
+              >
+                Unregister
+              </button>
+              <center>
+                <p className="text-white text-xs">
+                  <span className="font-bold text-orange-400">0</span> seat left
+                </p>
+              </center>
+            </>
           ) : (
             <>
               <button
@@ -233,14 +240,18 @@ const OneirosComp = () => {
           <img src={sponsor5} alt="title" className="w-2/12 h-2/12 p-2" />
           <img src={sponsor6} alt="title" className="w-2/12 h-2/12 p-2" />
         </div>
-        <div className="flex justify-center flex-col items-center">
-          <h1>Your Registration</h1>
-          <QRCode
-            size={256}
-            style={{ height: "auto", maxWidth: "10rem", width: "10rem" }}
-            value={names}
-            viewBox={`0 0 256 256`}
-          />
+        <div className="flex justify-center flex-col items-center mt-5">
+          <h1 className="text-3xl font-bold">Your Registration</h1>
+          {register1 ? (
+            <QRCode
+              size={256}
+              style={{ height: "auto", maxWidth: "10rem", width: "10rem" }}
+              value={names}
+              viewBox={`0 0 256 256`}
+            />
+          ) : (
+            <h1 className="font-bold">No Registration Found</h1>
+          )}
         </div>
       </div>
     </div>

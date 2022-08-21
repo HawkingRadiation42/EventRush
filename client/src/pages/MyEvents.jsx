@@ -6,8 +6,12 @@ import univ from "../assets/University Events.svg";
 import reg from "../assets/Registered Events.svg";
 import { BsCircleFill } from "react-icons/bs";
 import footer from "../assets/footer.svg";
+const { AuthContext } = require("../AuthContext");
 
 const MyEvents = () => {
+  const { name, college_name } = React.useContext(AuthContext);
+  const [name1, setName] = name;
+  const [college_name1, setCollege_name] = college_name;
   return (
     <div className="bg-stone-100 min-h-screen">
       <Navbar />
@@ -15,9 +19,9 @@ const MyEvents = () => {
         <img src={eventsMap} alt="eventsMap" className=" mt-24 mb-5" />
         <div className="flex justify-center items-center w-full bg-white mt-5 rounded-lg border border-gray-200 shadow-md">
           <div className="flex flex-col justify-center items-center w-full rounded-lg border border-gray-200 shadow-md p-5">
-            <p className="font-semibold text-2xl">@{localStorage.getItem("name")}</p>
+            <p className="font-semibold text-2xl">@{name1}</p>
             <p className="text-purple-800 text-4xl font-bold uppercase w-full text-center">
-              {localStorage.getItem("college_name")}
+              {college_name1}
             </p>
             <Calender />
           </div>

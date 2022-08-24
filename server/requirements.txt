@@ -7,3 +7,4 @@ uvicorn
 motor
 sendgrid
 qrcode
+motor

@@ -1,5 +1,5 @@
 
-# Hack JKLU
+# Event Rush
 
 ## Description
 

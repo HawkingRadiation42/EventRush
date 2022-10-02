@@ -15,10 +15,6 @@ app = FastAPI()
 
 
 origins = [
-    "http://localhost.tiangolo.com",
-    "https://localhost.tiangolo.com",
-    "http://localhost",
-    "http://localhost:8080",
     "*"
 ]
 
@@ -29,14 +25,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-# app.add_middleware(
-#     CORSMiddleware, 
-#     allow_origin = ["*"],
-#     allow_credentials = True,
-#     allow_methods = ["*"],
-#     allow_headers = ["*"],
-# )
-
 
 
 @app.post("/register", status_code=201)
@@ -83,3 +71,8 @@ async def registeration_event(register: Register):
     if response:
         return 
     raise HTTPException(400, "something went wrong / bad request")
+    
+    
+@app.post("/user", status_code=200)
+async def userdetails():
+    return 0

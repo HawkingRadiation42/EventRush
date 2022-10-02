@@ -16,21 +16,16 @@ Campus rush is an Event/Fest registrations website. Build using React for the Fr
 
 
 
-## Installation
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-
 =======
 ## RUN THESE FOLLOWING SCRIPTS: <br />
 
-### To change the directory to server
+#### change the directory to server
 cd server<br />
 
-### To install python libraries<br />
+#### To install python libraries<br />
 pip install -r requirements.txt<br />
 
-### Start the web server<br />
+#### Start the web server<br />
 uvicorn main:app --reload<br />
 
 #### Backend file hosted on mongodb atlas<br />

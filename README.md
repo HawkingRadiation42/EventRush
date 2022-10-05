@@ -3,7 +3,7 @@
 
 ## Description
 
-Campus rush is an Event/Fest registrations website. Build using React for the Front-end and Fast API for the Back-end.
+Campus rush is an Event/Fest registrations website. Built using React for the Front-end, Fast API for the Back-end and MongoDB for the database for HackJKLU Hackathon.
 
 ## Visuals
 <h3> Home Page- </h3>

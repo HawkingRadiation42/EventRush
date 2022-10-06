@@ -33,7 +33,7 @@ uvicorn main:app --reload<br />
 
 
 ## <h2> Tech Stack</h2>
-### <li>FastAPi</li>
+### <li>FastAPI</li>
 ### <li>React</li>
 ### <li>MongoDB</li>
 ### <li>Tailwaind CSS</li>

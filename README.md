@@ -59,3 +59,11 @@ Making it just a Scan and Go process.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Developers
+<b>TEAM 0SKILLZ<b>
+1. Sayantan Mondal
+2. Shrey Khandelwal
+3. Samridh Srivastava
+4. Vansh Sharma
+5. Homedeep Singh Saggu

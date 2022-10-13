@@ -31,11 +31,10 @@ uvicorn main:app --reload<br />
 #### Backend file hosted on mongodb atlas<br />
 
 
-
 ## <h2> Tech Stack</h2>
 ### <li>FastAPI</li>
-### <li>React</li>
-### <li>MongoDB</li>
+### <li>React.js</li>
+### <li>MongoDB atlas</li>
 ### <li>Tailwaind CSS</li>
 ### <li>Python</li>
 =============
@@ -55,7 +54,7 @@ Making it just a Scan and Go process.
 3. Help control the crowd.
 4. Limit and give control to achieve a particular number of seats/targets.
 5. Keep the student aware of the events happening.
-6. Save resources. 
+6. Save resources of event managers.
  
 
 ## License

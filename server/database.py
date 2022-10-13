@@ -1,7 +1,6 @@
 from model import SignUp, Login, Register
 from fastapi import HTTPException
 from pymongo import MongoClient
-
 import os
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
@@ -18,7 +17,6 @@ db = client.event_rush
 collection = db["authentication"]
 registeration = db["events"]
 print("connection successfull!")
-
 
 
 async def register(signup):
@@ -38,8 +36,6 @@ async def signin(login):
         raise HTTPException(status_code=400, detail="Incorrect username or password")
     # return result
     return result
-
-
 
 async def register_event(register):
     document = register

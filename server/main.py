@@ -80,3 +80,10 @@ async def userdetails():
 @app.post("/admin", status_code=200)
 async def admindetails():
     return 0
+
+@app.post("/culturalfest", status_code = 200)
+async def event_id(event:id):
+     response = await event_id(event)
+     if response:
+         return response
+     raise HTTPException(404, "there are no events to register")

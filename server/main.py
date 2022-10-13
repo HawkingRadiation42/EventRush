@@ -76,3 +76,7 @@ async def registeration_event(register: Register):
 @app.post("/user", status_code=200)
 async def userdetails():
     return 0
+
+@app.post("/admin", status_code=200)
+async def admindetails():
+    return 0

@@ -35,3 +35,9 @@ class Register(BaseModel):
     event_time: str
     event_type: str
     mobile: str
+        
+        
+class Admin(BaseModel):
+    email: str
+    name: str
+    password: str

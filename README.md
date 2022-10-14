@@ -60,7 +60,7 @@ Making it just a Scan and Go process.
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
-## Developers
+## Contributors 
 <b>TEAM 0SKILLZ<b>
 1. Sayantan Mondal
 2. Shrey Khandelwal
